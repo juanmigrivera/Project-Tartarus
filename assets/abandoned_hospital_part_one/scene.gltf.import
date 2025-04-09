@@ -1,0 +1,430 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://67m2ndm63f8s"
+path="res://.godot/imported/scene.gltf-78556d6f6c6de704a47d3013a56478e3.scn"
+
+[deps]
+
+source_file="res://assets/abandoned_hospital_part_one/scene.gltf"
+dest_files=["res://.godot/imported/scene.gltf-78556d6f6c6de704a47d3013a56478e3.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_10m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_11m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_12m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_13m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_14m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_15m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_16m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_17m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_18m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_19m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_1m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_20m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_21m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_22m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_23m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_24m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_25m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_26m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_27m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_28m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_29m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_2m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_30m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_31m_0": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_32m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_33m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_34m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_35m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_36m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_37m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_38m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_39m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_3m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_40m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_41m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_42m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_43m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_44m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_45m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_46m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_47m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_48m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_49m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_4m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_50m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_51m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_52m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_53m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_54m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_55m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_56m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_57m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_59m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_5m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_60m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_61m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_62m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_63m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_64m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_65m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_66m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_67m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_68m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_69m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_6m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_70m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_71m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_72m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_73m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_74m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_75m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_76m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_77m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_78m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_79m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_7m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_80m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_81m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_82m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_83m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_84m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_85m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_86m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_8m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_9m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_GLASS_Dark_Inst_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_Light1_m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_Light6_m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_blood1m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_blood2m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_decal1m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/Hospital01/Hospital01_decal2m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door1_SM/door1_SM_door1m1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door1_SM/door1_SM_door1m2_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door1_SM001/door1_SM001_door1m1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door1_SM001/door1_SM001_door1m2_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door2_SM/door2_SM_door1m1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM/door3_SM_GLASS_Dark_Inst_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM/door3_SM_door3m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM001/door3_SM001_GLASS_Dark_Inst_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM001/door3_SM001_door3m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM002/door3_SM002_GLASS_Dark_Inst_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM002/door3_SM002_door3m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM003/door3_SM003_GLASS_Dark_Inst_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM003/door3_SM003_door3m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM004/door3_SM004_GLASS_Dark_Inst_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM004/door3_SM004_door3m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM005/door3_SM005_GLASS_Dark_Inst_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM005/door3_SM005_door3m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM006/door3_SM006_GLASS_Dark_Inst_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM006/door3_SM006_door3m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM007/door3_SM007_GLASS_Dark_Inst_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM007/door3_SM007_door3m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM008/door3_SM008_GLASS_Dark_Inst_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM008/door3_SM008_door3m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM009/door3_SM009_GLASS_Dark_Inst_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM009/door3_SM009_door3m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM010/door3_SM010_GLASS_Dark_Inst_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM010/door3_SM010_door3m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM011/door3_SM011_GLASS_Dark_Inst_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door3_SM011/door3_SM011_door3m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door4_SM/door4_SM_door4m1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door4_SM/door4_SM_door4m2_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door5_SM/door5_SM_door5m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door5_SM001/door5_SM001_door5m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door6_SM/door6_SM_6m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door6_SM/door6_SM_7m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door6_SM001/door6_SM001_6m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door6_SM001/door6_SM001_7m_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Hospital_part1_low_FBX/RootNode/door7_SM/door7_SM_door7m_0": {
+"generate/physics": true
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1
