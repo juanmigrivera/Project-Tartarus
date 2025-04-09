@@ -1,0 +1,11 @@
+Model Information:
+* title:	Abandoned Hospital: part one
+* source:	https://sketchfab.com/3d-models/abandoned-hospital-part-one-8461ff4cbf23429ebbc49388305a8b9d
+* author:	Veterock (https://sketchfab.com/windofglass)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Abandoned Hospital: part one" (https://sketchfab.com/3d-models/abandoned-hospital-part-one-8461ff4cbf23429ebbc49388305a8b9d) by Veterock (https://sketchfab.com/windofglass) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
