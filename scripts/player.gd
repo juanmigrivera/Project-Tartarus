@@ -1,9 +1,9 @@
 extends CharacterBody3D
 
 @onready var interact_ray = $Camera3D/RayCast3D
-@export var speed = 5.0
-@export var mouse_sensitivity = 0.1
-@export var interact_distance = 2.5
+@export var speed : int = 5.0
+@export var mouse_sensitivity : float = 0.1
+@export var interact_distance : float = 2.5
 
 var yaw = 0.0
 var pitch = 0.0
