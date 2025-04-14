@@ -52,7 +52,7 @@ transform = Transform3D(0.01, 0, 0, 0, 2.22045e-18, 0.01, 0, -0.01, 2.22045e-18,
 [node name="Door3" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door3_SM" parent="Hospital8Room/Door3" instance=ExtResource("4_pm3ni")]
-transform = Transform3D(-0.01, -1.50996e-09, 1.22465e-18, 1.22465e-18, -4.44089e-18, 0.01, -1.50996e-09, 0.01, 3.33067e-18, -52.02, 10.238, 26.133)
+transform = Transform3D(-0.01, -1.50996e-09, 1.22465e-18, 1.22465e-18, -4.44089e-18, 0.01, -1.50996e-09, 0.01, 3.33067e-18, -42.09, 10.238, 23.25)
 
 [node name="Door3_1" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
