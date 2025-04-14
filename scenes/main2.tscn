@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bllcr20v4ypyl"]
+
+[ext_resource type="PackedScene" uid="uid://cbs8m03obx14q" path="res://assets/hospital_part_2/scene.gltf" id="1_815o8"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_815o8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.337945, -0.394788, -0.619312)
