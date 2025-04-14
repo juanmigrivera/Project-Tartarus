@@ -1,7 +1,9 @@
 extends CharacterBody3D
 
-@export var speed = 5.0
-@export var mouse_sensitivity = 0.1
+@onready var interact_ray = $Camera3D/RayCast3D
+@export var speed : int = 5.0
+@export var mouse_sensitivity : float = 0.1
+@export var interact_distance : float = 2.5
 
 var yaw = 0.0
 var pitch = 0.0
@@ -29,4 +31,13 @@ func _physics_process(delta):
 		direction += transform.basis.x
 	velocity = direction.normalized() * speed
 	move_and_slide()
+	
+	if interact_ray.is_colliding():
+		var thing = interact_ray.get_collider()
+		var target = thing.get_parent().get_parent().get_parent()
+
+		var distance = global_position.distance_to(thing.global_position)
 		
+		if target.has_method("_on_player_interact") and distance <= interact_distance:
+			if Input.is_action_just_pressed("interact"):
+				target._on_player_interact()
