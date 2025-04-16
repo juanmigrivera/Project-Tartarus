@@ -28,8 +28,8 @@
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ac04k"]
 sky_top_color = Color(0, 0, 0, 1)
 sky_horizon_color = Color(0, 0, 0, 1)
-ground_bottom_color = Color(0.137947, 0.114357, 0.0869545, 1)
-ground_horizon_color = Color(0.31827, 0.326239, 0.338819, 1)
+ground_bottom_color = Color(0.100316, 0.0812793, 0.0591644, 1)
+ground_horizon_color = Color(0.171834, 0.176927, 0.184967, 1)
 
 [sub_resource type="Sky" id="Sky_88kfp"]
 sky_material = SubResource("ProceduralSkyMaterial_ac04k")
@@ -39,6 +39,19 @@ background_mode = 2
 sky = SubResource("Sky_88kfp")
 
 [node name="Node3D" type="Node3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+offset_left = 32.0
+offset_top = -39.0
+offset_right = 273.0
+offset_bottom = 93.0
+
+[node name="BatteryLevel" type="Label" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+text = "Flashlight Battery: 100%"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_kk85q")
