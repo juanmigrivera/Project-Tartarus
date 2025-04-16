@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://ymtfdbyg57bs"]
+
+[ext_resource type="PackedScene" uid="uid://c05hnupbmq4pp" path="res://assets/lever/lever_switch.gltf" id="1_h68gc"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_h68gc")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Sketchfab_model/308d62c5f21d4b508aa9b41f2001dc4c_fbx/Object_2/RootNode/Anim/Root/Object_8" index="0"]
+bones/1/rotation = Quaternion(-0.0620521, 0.743745, -0.662405, -0.0649043)
+bones/2/rotation = Quaternion(-0.0442875, 0.702576, 0.0438941, 0.708872)
+bones/2/scale = Vector3(1, 1, 1)
+
+[node name="02_2" parent="Sketchfab_model/308d62c5f21d4b508aa9b41f2001dc4c_fbx/Object_2/RootNode" index="2"]
+visible = false
+
+[node name="02_1_2" parent="Sketchfab_model/308d62c5f21d4b508aa9b41f2001dc4c_fbx/Object_2/RootNode/02_2" index="0"]
+visible = false
+
+[node name="02_1_2_02_0" parent="Sketchfab_model/308d62c5f21d4b508aa9b41f2001dc4c_fbx/Object_2/RootNode/02_2/02_1_2" index="0"]
+visible = false
+
+[node name="02_3" parent="Sketchfab_model/308d62c5f21d4b508aa9b41f2001dc4c_fbx/Object_2/RootNode/02_2" index="1"]
+visible = false
