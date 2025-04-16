@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lever_Switch_Electric_16MB
+* source:	https://sketchfab.com/3d-models/lever-switch-electric-16mb-94185acdb1d5446cb5814fbfcfb699e8
+* author:	Mehdi Shahsavan (https://sketchfab.com/ahmagh2e)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lever_Switch_Electric_16MB" (https://sketchfab.com/3d-models/lever-switch-electric-16mb-94185acdb1d5446cb5814fbfcfb699e8) by Mehdi Shahsavan (https://sketchfab.com/ahmagh2e) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

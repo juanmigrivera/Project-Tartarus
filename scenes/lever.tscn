@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://2a47i7jk1v08"]
+
+[ext_resource type="Script" path="res://scripts/lever.gd" id="1_jsoy1"]
+[ext_resource type="PackedScene" uid="uid://ymtfdbyg57bs" path="res://assets/lever/LeverModel.tscn" id="2_2f0gn"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_84atx"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cdrdd"]
+
+[node name="LeverRoomPiece" type="Node3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+script = ExtResource("1_jsoy1")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 3.65229, 0)
+light_color = Color(1, 0.0588235, 0, 1)
+light_energy = 5.0
+light_volumetric_fog_energy = 16.0
+
+[node name="LeverModel" parent="." instance=ExtResource("2_2f0gn")]
+
+[node name="mini_light" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.130391, 3.30983, 2.17298)
+mesh = SubResource("CapsuleMesh_84atx")
+
+[node name="InteractArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0422928, 1.84456, 3.19866)
+shape = SubResource("SphereShape3D_cdrdd")
