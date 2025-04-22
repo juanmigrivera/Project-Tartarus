@@ -5,7 +5,7 @@ signal lever_flipped
 @export var is_powered:bool = false
 var is_flipped: bool = false
 var player_nearby: bool = false
-
+var timer: Timer
 @onready var light = $OmniLight3D
 @onready var lever_animation = $AnimationPlayer
 @onready var area = $InteractArea
@@ -33,18 +33,21 @@ func _on_body_exited(body):
 func flip_lever():
 	if is_powered and not is_flipped:
 		is_flipped=true
+		light.light_color = Color(0, 1, 0)
 	lever_animation.play("CINEMA_4D_Main")
 	emit_signal("lever_flipped")
+	
+
 
 func update_light():
 	light.visible = is_powered
-	if is_powered:
+	if is_powered and not is_flipped:
 		flicker_light()
 		
 func flicker_light():
 	var timer = Timer.new()
 	add_child(timer)
-	timer.wait_time = 0.05
+	timer.wait_time = 0.25
 	timer.one_shot = false 
 	timer.start()
 	
