@@ -3,12 +3,14 @@ extends CharacterBody3D
 @onready var interact_ray = $Camera3D/RayCast3D
 @onready var player_flashlight = $Camera3D/Flashlight
 @onready var flashlight_battery = $"../CanvasLayer/MarginContainer/BatteryLevel"
+@onready var footstep_sounds = $AudioStreamPlayer3D
 
-@export var speed : int = 5.0
-@export var mouse_sensitivity : float = 0.1
+@export var speed : int = 2.0
+@export var mouse_sensitivity : float = 0.05
 @export var interact_distance : float = 2.5
 @export var battery_max: float = 100.00 
-@export var battery_drain_rate: float = 3.0 #drain per second 
+@export var battery_drain_rate: float = 1.0 #drain per second 
+
 
 var battery_level = battery_max
 var flashlight_on: bool= false
@@ -44,6 +46,20 @@ func _physics_process(delta):
 		direction += transform.basis.x
 	velocity = direction.normalized() * speed
 	move_and_slide()
+	
+	var is_moving = (
+		Input.is_action_pressed("move_forward") or
+		Input.is_action_pressed("move_back") or
+		Input.is_action_pressed("move_left") or
+		Input.is_action_pressed("move_right")
+	)
+
+	if is_moving:
+		if not footstep_sounds.playing:
+			footstep_sounds.play()
+	else:
+		if footstep_sounds.playing:
+			footstep_sounds.stop()
 	
 	if interact_ray.is_colliding():
 		var thing = interact_ray.get_collider()
