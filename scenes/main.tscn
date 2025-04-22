@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bq4ywxaybmdxg"]
+[gd_scene load_steps=34 format=3 uid="uid://bq4ywxaybmdxg"]
 
 [ext_resource type="PackedScene" uid="uid://3pmq78q3eror" path="res://scenes/player.tscn" id="2_s6fyp"]
 [ext_resource type="PackedScene" uid="uid://bw71rrctam3n4" path="res://scenes/door_3_sm_001.tscn" id="2_sugp2"]
@@ -25,6 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://b8llfttbrpjrr" path="res://scenes/8_room_PuzzleFinalDoor.tscn" id="23_61q37"]
 [ext_resource type="PackedScene" uid="uid://c38yn83wgd8fn" path="res://scenes/LeverModel.tscn" id="24_h78xu"]
 [ext_resource type="AudioStream" uid="uid://c4oto3hc43is1" path="res://assets/sounds/horror-background-atmosphere-for-horror-and-mystical-179447.mp3" id="25_oa7hl"]
+[ext_resource type="Script" uid="uid://ccp1q6bton044" path="res://scripts/Enemy_Walking.gd" id="26_vxglm"]
+[ext_resource type="PackedScene" uid="uid://di4llnlswp4ym" path="res://assets/Enemy/blob_monster.glb" id="27_2f3dj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ac04k"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -38,6 +40,12 @@ sky_material = SubResource("ProceduralSkyMaterial_ac04k")
 [sub_resource type="Environment" id="Environment_kk85q"]
 background_mode = 2
 sky = SubResource("Sky_88kfp")
+
+[sub_resource type="BoxMesh" id="BoxMesh_yq6so"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fv21b"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tel4y"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -202,3 +210,26 @@ parameters/looping = true
 [node name="8 puzzle final door" parent="." instance=ExtResource("23_61q37")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4182, 10.5215, 18.874)
 levers = Array[NodePath]([NodePath("../LeftLevers/Lever"), NodePath("../LeftLevers/Lever2"), NodePath("../LeftLevers/Lever3"), NodePath("../LeftLevers/Lever4"), NodePath("../RightLevers/Lever5"), NodePath("../RightLevers/Lever6"), NodePath("../RightLevers/Lever7"), NodePath("../RightLevers/Lever8")])
+
+[node name="target2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.347, 11.2, 21.1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="target2"]
+mesh = SubResource("BoxMesh_yq6so")
+
+[node name="target" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.907, 11.2, 21.1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="target"]
+mesh = SubResource("BoxMesh_fv21b")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.056, 11.2, 21.1)
+axis_lock_linear_y = true
+script = ExtResource("26_vxglm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419307, 0)
+shape = SubResource("CapsuleShape3D_tel4y")
+
+[node name="Sketchfab_Scene" parent="CharacterBody3D" instance=ExtResource("27_2f3dj")]
