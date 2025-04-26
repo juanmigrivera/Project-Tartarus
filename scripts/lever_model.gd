@@ -9,6 +9,7 @@ var timer: Timer
 @onready var light = $OmniLight3D
 @onready var lever_animation = $AnimationPlayer
 @onready var area = $InteractArea
+@onready var lever_sound = $AudioStreamPlayer3D
 
 func _ready():
 	randomize()
@@ -21,6 +22,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("interact") and player_nearby:
 		print("works")
 		flip_lever()
+		lever_sound_play()
 
 func _on_body_entered(body):
 	if body.name == "Player":
@@ -37,8 +39,10 @@ func flip_lever():
 	lever_animation.play("CINEMA_4D_Main")
 	emit_signal("lever_flipped")
 	
-
-
+func lever_sound_play():
+	if not lever_sound.playing:
+		lever_sound.play()
+		
 func update_light():
 	light.visible = is_powered
 	if is_powered and not is_flipped:
