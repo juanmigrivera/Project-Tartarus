@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c38yn83wgd8fn"]
 
 [ext_resource type="PackedScene" uid="uid://c05hnupbmq4pp" path="res://assets/lever/lever_switch.gltf" id="1_4lumu"]
-[ext_resource type="Script" path="res://scripts/lever_model.gd" id="2_6qn17"]
+[ext_resource type="Script" uid="uid://ck07mu120ihfu" path="res://scripts/lever_model.gd" id="2_6qn17"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_jgpce"]
 
