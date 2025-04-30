@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bq4ywxaybmdxg"]
+[gd_scene load_steps=69 format=3 uid="uid://bq4ywxaybmdxg"]
 
 [ext_resource type="PackedScene" uid="uid://3pmq78q3eror" path="res://scenes/player.tscn" id="2_s6fyp"]
 [ext_resource type="PackedScene" uid="uid://bw71rrctam3n4" path="res://scenes/door_3_sm_001.tscn" id="2_sugp2"]
@@ -43,6 +43,503 @@ sky_material = SubResource("ProceduralSkyMaterial_ac04k")
 background_mode = 2
 sky = SubResource("Sky_88kfp")
 
+[sub_resource type="Animation" id="Animation_tel4y"]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Door6_1/door6_SM001:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yq6so"]
+resource_name = "door_open"
+length = 2.0
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qkpxi"]
+resource_name = "door1_SM"
+length = 2.0
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../../Door1/door1_SM")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Door1/door1_SM:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fv21b"]
+resource_name = "door2_SM"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, -1.5708), Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, -1.5708)]
+}
+
+[sub_resource type="Animation" id="Animation_5q0nq"]
+resource_name = "door1_SM001"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dgi5k"]
+resource_name = "door3_SM"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j8jky"]
+resource_name = "door3_SM001"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pibwh"]
+resource_name = "door6_SM"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Door6_1/door6_SM001:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tel4y"]
+_data = {
+&"RESET": SubResource("Animation_tel4y"),
+&"door1_SM": SubResource("Animation_qkpxi"),
+&"door1_SM001": SubResource("Animation_5q0nq"),
+&"door2_SM": SubResource("Animation_fv21b"),
+&"door3_SM": SubResource("Animation_dgi5k"),
+&"door3_SM001": SubResource("Animation_j8jky"),
+&"door6_SM": SubResource("Animation_pibwh"),
+&"door_open": SubResource("Animation_yq6so")
+}
+
+[sub_resource type="Animation" id="Animation_fuf3a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kmb1v"]
+resource_name = "door3_SM002"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pibwh"]
+_data = {
+&"RESET": SubResource("Animation_fuf3a"),
+&"door3_SM002": SubResource("Animation_kmb1v")
+}
+
+[sub_resource type="Animation" id="Animation_5he1u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_c6pm6"]
+resource_name = "door3_SM003"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5poiv"]
+_data = {
+&"RESET": SubResource("Animation_5he1u"),
+&"door3_SM003": SubResource("Animation_c6pm6")
+}
+
+[sub_resource type="Animation" id="Animation_chjal"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2cjbq"]
+resource_name = "door3_SM004"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cjqg0"]
+_data = {
+&"RESET": SubResource("Animation_chjal"),
+&"door3_SM004": SubResource("Animation_2cjbq")
+}
+
+[sub_resource type="Animation" id="Animation_txyw0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vchkt"]
+resource_name = "door3_SM005"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vc5cj"]
+_data = {
+&"RESET": SubResource("Animation_txyw0"),
+&"door3_SM005": SubResource("Animation_vchkt")
+}
+
+[sub_resource type="Animation" id="Animation_ty1g6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nvyfr"]
+resource_name = "door3_SM006"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j2jfr"]
+_data = {
+&"RESET": SubResource("Animation_ty1g6"),
+&"door3_SM006": SubResource("Animation_nvyfr")
+}
+
+[sub_resource type="Animation" id="Animation_bu4jf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bjg73"]
+resource_name = "door3_sm007"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o7ddy"]
+_data = {
+&"RESET": SubResource("Animation_bu4jf"),
+&"door3_SM007": SubResource("Animation_bjg73")
+}
+
+[sub_resource type="Animation" id="Animation_ids8r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0loja"]
+resource_name = "door4"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dnhof"]
+_data = {
+&"RESET": SubResource("Animation_ids8r"),
+&"door4_SM": SubResource("Animation_0loja")
+}
+
+[sub_resource type="Animation" id="Animation_cjqg0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Door6/door6_SM:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5poiv"]
+resource_name = "door6_SM001"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Door6/door6_SM:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vchkt"]
+_data = {
+&"RESET": SubResource("Animation_cjqg0"),
+&"door6_SM001": SubResource("Animation_5poiv")
+}
+
 [sub_resource type="BoxMesh" id="BoxMesh_yq6so"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fv21b"]
@@ -78,7 +575,12 @@ transform = Transform3D(-0.947768, 0, 0.318959, 0, 1, 0, -0.318959, 0, -0.947768
 [node name="Door1" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door1_SM" parent="Hospital8Room/Door1" instance=ExtResource("18_fuf3a")]
-transform = Transform3D(0.01, 0, 0, 0, 2.22045e-18, 0.01, 0, -0.01, 2.22045e-18, 41.13, 0.41, -31.87)
+transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.01, 3.61999e-08, 41.13, 0.41, -31.87)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door1/door1_SM"]
+libraries = {
+&"": SubResource("AnimationLibrary_tel4y")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door1"]
 stream = ExtResource("23_32suv")
@@ -87,7 +589,12 @@ volume_db = -3.0
 [node name="Door2" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door2_SM" parent="Hospital8Room/Door2" instance=ExtResource("21_5he1u")]
-transform = Transform3D(1.62921e-09, 0.01, -1.66533e-18, -5.55111e-19, 2.22045e-18, 0.01, 0.01, -1.62921e-09, 1.11022e-18, 46.52, 0.37, -34.39)
+transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.01, 3.61999e-08, 46.52, 0.37, -34.39)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door2/door2_SM"]
+libraries = {
+&"": SubResource("AnimationLibrary_tel4y")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door2"]
 stream = ExtResource("23_32suv")
@@ -96,7 +603,12 @@ volume_db = -3.0
 [node name="Door1_1" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door1_SM001" parent="Hospital8Room/Door1_1" instance=ExtResource("20_c6pm6")]
-transform = Transform3D(0.01, 0, 0, 0, 2.22045e-18, 0.01, 0, -0.01, 2.22045e-18, 44.09, 0.37, -38.65)
+transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.01, 3.61999e-08, 44.09, 0.37, -38.65)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door1_1/door1_SM001"]
+libraries = {
+&"": SubResource("AnimationLibrary_tel4y")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door1_1"]
 stream = ExtResource("23_32suv")
@@ -105,7 +617,12 @@ volume_db = -3.0
 [node name="Door3" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door3_SM" parent="Hospital8Room/Door3" instance=ExtResource("4_pm3ni")]
-transform = Transform3D(-0.01, -1.50996e-09, 1.22465e-18, 1.22465e-18, -4.44089e-18, 0.01, -1.50996e-09, 0.01, 3.33067e-18, -42.09, 10.238, 23.1811)
+transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.01, 3.61999e-08, -42.09, 10.238, 23.1811)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door3/door3_SM"]
+libraries = {
+&"": SubResource("AnimationLibrary_tel4y")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door3"]
 stream = ExtResource("23_32suv")
@@ -114,7 +631,12 @@ volume_db = -3.0
 [node name="Door3_1" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door3_SM001" parent="Hospital8Room/Door3_1" instance=ExtResource("2_sugp2")]
-transform = Transform3D(-0.01, -1.50996e-09, 1.22465e-18, 1.22465e-18, -4.44089e-18, 0.01, -1.50996e-09, 0.01, 3.33067e-18, -34.45, 10.264, 23.25)
+transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.01, 3.61999e-08, -34.45, 10.264, 23.25)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door3_1/door3_SM001"]
+libraries = {
+&"": SubResource("AnimationLibrary_tel4y")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door3_1"]
 stream = ExtResource("23_32suv")
@@ -123,7 +645,12 @@ volume_db = -3.0
 [node name="Door3_2" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door3_SM002" parent="Hospital8Room/Door3_2" instance=ExtResource("5_y6deb")]
-transform = Transform3D(-0.01, -1.50996e-09, 1.22465e-18, 1.22465e-18, -4.44089e-18, 0.01, -1.50996e-09, 0.01, 3.33067e-18, -26.81, 10.264, 23.25)
+transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.01, 3.61999e-08, -26.81, 10.264, 23.25)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door3_2/door3_SM002"]
+libraries = {
+&"": SubResource("AnimationLibrary_pibwh")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door3_2"]
 stream = ExtResource("23_32suv")
@@ -132,7 +659,12 @@ volume_db = -3.0
 [node name="Door3_3" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door3_SM003" parent="Hospital8Room/Door3_3" instance=ExtResource("6_og1vs")]
-transform = Transform3D(-0.01, -1.50996e-09, 1.22465e-18, 1.22465e-18, -4.44089e-18, 0.01, -1.50996e-09, 0.01, 3.33067e-18, -19.15, 10.264, 23.25)
+transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.01, 3.61999e-08, -19.15, 10.264, 23.25)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door3_3/door3_SM003"]
+libraries = {
+&"": SubResource("AnimationLibrary_5poiv")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door3_3"]
 stream = ExtResource("23_32suv")
@@ -141,7 +673,12 @@ volume_db = -3.0
 [node name="Door3_4" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door3_SM004" parent="Hospital8Room/Door3_4" instance=ExtResource("8_vxglm")]
-transform = Transform3D(-0.01, -1.50996e-09, 1.22465e-18, 1.22465e-18, -4.44089e-18, 0.01, -1.50996e-09, 0.01, 3.33067e-18, -19.17, 10.264, 19.05)
+transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.01, 3.61999e-08, -19.17, 10.264, 19.05)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door3_4/door3_SM004"]
+libraries = {
+&"": SubResource("AnimationLibrary_cjqg0")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door3_4"]
 stream = ExtResource("23_32suv")
@@ -150,7 +687,12 @@ volume_db = -3.0
 [node name="Door3_5" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door3_SM005" parent="Hospital8Room/Door3_5" instance=ExtResource("9_2f3dj")]
-transform = Transform3D(-0.01, -1.50996e-09, 1.22465e-18, 1.22465e-18, -4.44089e-18, 0.01, -1.50996e-09, 0.01, 3.33067e-18, -26.8, 10.264, 18.99)
+transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.01, 3.61999e-08, -26.8, 10.264, 18.99)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door3_5/door3_SM005"]
+libraries = {
+&"": SubResource("AnimationLibrary_vc5cj")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door3_5"]
 stream = ExtResource("23_32suv")
@@ -159,7 +701,12 @@ volume_db = -3.0
 [node name="Door3_6" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door3_SM006" parent="Hospital8Room/Door3_6" instance=ExtResource("10_yq6so")]
-transform = Transform3D(-0.01, -1.50996e-09, 1.22465e-18, 1.22465e-18, -4.44089e-18, 0.01, -1.50996e-09, 0.01, 3.33067e-18, -34.4631, 10.264, 19.1354)
+transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.01, 3.61999e-08, -34.4631, 10.264, 19.1354)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door3_6/door3_SM006"]
+libraries = {
+&"": SubResource("AnimationLibrary_j2jfr")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door3_6"]
 stream = ExtResource("23_32suv")
@@ -168,7 +715,12 @@ volume_db = -3.0
 [node name="Door3_7" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door3_SM007" parent="Hospital8Room/Door3_7" instance=ExtResource("11_fv21b")]
-transform = Transform3D(-0.01, -1.50996e-09, 1.22465e-18, 1.22465e-18, -4.44089e-18, 0.01, -1.50996e-09, 0.01, 3.33067e-18, -42.09, 10.264, 19.1474)
+transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.01, 3.61999e-08, -42.09, 10.264, 19.1474)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door3_7/door3_SM007"]
+libraries = {
+&"": SubResource("AnimationLibrary_o7ddy")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door3_7"]
 stream = ExtResource("23_32suv")
@@ -177,7 +729,12 @@ volume_db = -3.0
 [node name="Door4" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door4_SM" parent="Hospital8Room/Door4" instance=ExtResource("3_jscy8")]
-transform = Transform3D(-0.00821149, -0.00570713, 3.82137e-17, 2.49467e-10, -3.58936e-10, 0.01, -0.00570713, 0.00821149, 4.37114e-10, -52.02, 10.238, 26.133)
+transform = Transform3D(-0.00999999, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.00999999, 3.61999e-08, -52.02, 10.238, 26.133)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door4/door4_SM"]
+libraries = {
+&"": SubResource("AnimationLibrary_dnhof")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door4"]
 stream = ExtResource("23_32suv")
@@ -186,7 +743,12 @@ volume_db = -3.0
 [node name="Door6" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door6_SM" parent="Hospital8Room/Door6" instance=ExtResource("12_tel4y")]
-transform = Transform3D(0.01, 0, 0, 0, 2.22045e-18, 0.01, 0, -0.01, 2.22045e-18, 18.72, 6, -0.201)
+transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.01, 3.61999e-08, 18.72, 6, -1.2156)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door6/door6_SM"]
+libraries = {
+&"": SubResource("AnimationLibrary_tel4y")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door6"]
 stream = ExtResource("23_32suv")
@@ -195,7 +757,12 @@ volume_db = -3.0
 [node name="Door6_1" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door6_SM001" parent="Hospital8Room/Door6_1" instance=ExtResource("13_qkpxi")]
-transform = Transform3D(0.01, 0, 0, 0, 2.22045e-18, 0.01, 0, -0.01, 2.22045e-18, 18.72, 6, 1.039)
+transform = Transform3D(0.01, 0, 0, 0, -3.61999e-08, 0.01, 0, -0.01, -3.61999e-08, 18.72, 6, 1.039)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hospital8Room/Door6_1/door6_SM001"]
+libraries = {
+&"": SubResource("AnimationLibrary_vchkt")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door6_1"]
 stream = ExtResource("23_32suv")
@@ -204,13 +771,14 @@ volume_db = -3.0
 [node name="Door6_2" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door6_SM002" parent="Hospital8Room/Door6_2" instance=ExtResource("13_qkpxi")]
-transform = Transform3D(0.01, 0, 0, 0, 2.22045e-18, 0.01, 0, -0.01, 2.22045e-18, 11.42, 6, 8.03)
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, 0.01, 0, -0.01, -4.37114e-10, 11.42, 6, 8.03)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hospital8Room/Door6_2"]
 stream = ExtResource("23_32suv")
 volume_db = -3.0
 
 [node name="Door5_1" parent="Hospital8Room" instance=ExtResource("21_pm3ni")]
+is_locked = true
 
 [node name="door5_SM001" parent="Hospital8Room/Door5_1" instance=ExtResource("17_kmb1v")]
 transform = Transform3D(1.62921e-09, 0.01, -1.66533e-18, -5.55111e-19, 2.22045e-18, 0.01, 0.01, -1.62921e-09, 1.11022e-18, 43.88, 5.57, -12.98)
