@@ -4,7 +4,6 @@
 [ext_resource type="AudioStream" uid="uid://dw5odwvn64hqf" path="res://assets/sounds/heavy-footsteps-walking-35722.mp3" id="2_3v82h"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ym1g6"]
-height = 2.3
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_4flbx")

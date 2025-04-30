@@ -10,7 +10,7 @@ var target_rotation = 0.0
 func _process(delta):
 	var current_z = rotation.z
 	var desired_z = deg_to_rad(target_rotation)
-	rotation.y = lerp_angle(current_z, desired_z, delta * open_speed)
+	rotation.z = lerp_angle(current_z, desired_z, delta * open_speed)
 		
 func _on_player_interact():
 	if not door_sound.playing:
@@ -18,4 +18,4 @@ func _on_player_interact():
 	if is_open:
 		target_rotation = 0.0
 	else:
-		target_rotation = rotation.z +  90
+		target_rotation = rotation.z + open_angle
