@@ -11,6 +11,8 @@ extends CharacterBody3D
 @export var battery_max: float = 100.00 
 @export var battery_drain_rate: float = 1.0 #drain per second 
 
+const GRAVITY = 2
+const JUMP = 5
 
 var battery_level = battery_max
 var flashlight_on: bool= false
@@ -35,7 +37,10 @@ func _input(event):
 		
 		
 func _physics_process(delta):
+	
 	var direction = Vector3.ZERO
+	#Gravity
+	direction.y -= GRAVITY * delta
 	if Input.is_action_pressed("move_forward"):
 		direction -= transform.basis.z
 	if Input.is_action_pressed("move_backward"):
@@ -44,12 +49,14 @@ func _physics_process(delta):
 		direction -= transform.basis.x
 	if Input.is_action_pressed("move_right"):
 		direction += transform.basis.x
+	if Input.is_action_pressed("jump"):
+		direction += transform.basis.y
 	velocity = direction.normalized() * speed
 	move_and_slide()
 	
 	var is_moving = (
 		Input.is_action_pressed("move_forward") or
-		Input.is_action_pressed("move_back") or
+		Input.is_action_pressed("move_backward") or
 		Input.is_action_pressed("move_left") or
 		Input.is_action_pressed("move_right")
 	)
@@ -66,10 +73,10 @@ func _physics_process(delta):
 		var target = thing.get_parent().get_parent().get_parent()
 
 		var distance = global_position.distance_to(thing.global_position)
-		
-		if target.has_method("_on_player_interact") and distance <= interact_distance:
-			if Input.is_action_just_pressed("interact"):
-				target._on_player_interact()
+		if target:
+			if target.has_method("_on_player_interact") and distance <= interact_distance:
+				if Input.is_action_just_pressed("interact"):
+					target._on_player_interact()
 				
 		if flashlight_on:
 			battery_level -= battery_drain_rate * delta
