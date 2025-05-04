@@ -1,0 +1,49 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://de181tmdtxj01"
+path="res://.godot/imported/scene.gltf-1215377923c21fb619f32a4b5bd0b921.scn"
+
+[deps]
+
+source_file="res://old_and_worn_out_hospital_bed/scene.gltf"
+dest_files=["res://.godot/imported/scene.gltf-1215377923c21fb619f32a4b5bd0b921.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/ed81c30f46914e7f8ed19a1b5520ddea_fbx/RootNode/CAMA/CAMA_Base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/ed81c30f46914e7f8ed19a1b5520ddea_fbx/RootNode/CAMA/CAMA_Legs_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/ed81c30f46914e7f8ed19a1b5520ddea_fbx/RootNode/CAMA/CAMA_Mattres_0": {
+"generate/physics": true
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1
