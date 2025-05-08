@@ -8,7 +8,7 @@ extends CharacterBody3D
 @export var wander_time: int = 2
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
-@onready var player: Node3D = get_node("/root/CharacterBody3d")
+@onready var player: Node3D = get_node("/root/scenes/player")
 
 enum State { WANDER, CHASE }
 var state: State = State.WANDER
