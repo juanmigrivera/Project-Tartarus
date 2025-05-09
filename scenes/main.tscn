@@ -26,10 +26,10 @@
 [ext_resource type="PackedScene" uid="uid://c38yn83wgd8fn" path="res://scenes/LeverModel.tscn" id="24_h78xu"]
 [ext_resource type="AudioStream" uid="uid://bw4an6w82c1cf" path="res://assets/sounds/clank1.wav" id="25_37tja"]
 [ext_resource type="AudioStream" uid="uid://c4oto3hc43is1" path="res://assets/sounds/horror-background-atmosphere-for-horror-and-mystical-179447.mp3" id="25_oa7hl"]
-[ext_resource type="Script" uid="uid://ccp1q6bton044" path="res://scripts/Enemy_Walking.gd" id="26_vxglm"]
+[ext_resource type="Script" path="res://scripts/Enemy_Walking.gd" id="26_vxglm"]
 [ext_resource type="PackedScene" uid="uid://di4llnlswp4ym" path="res://assets/Enemy/blob_monster.glb" id="27_2f3dj"]
 [ext_resource type="PackedScene" uid="uid://de181tmdtxj01" path="res://old_and_worn_out_hospital_bed/scene.gltf" id="30_fv21b"]
-[ext_resource type="Script" uid="uid://crj1bsxmcymlx" path="res://old_and_worn_out_hospital_bed/bed.gd" id="31_tel4y"]
+[ext_resource type="Script" path="res://old_and_worn_out_hospital_bed/bed.gd" id="31_tel4y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ac04k"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -216,13 +216,13 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tel4y"]
 _data = {
 &"RESET": SubResource("Animation_tel4y"),
-&"door1_SM": SubResource("Animation_qkpxi"),
+&"door6_SM": SubResource("Animation_pibwh"),
 &"door1_SM001": SubResource("Animation_5q0nq"),
 &"door2_SM": SubResource("Animation_fv21b"),
+&"door_open": SubResource("Animation_yq6so"),
+&"door1_SM": SubResource("Animation_qkpxi"),
 &"door3_SM": SubResource("Animation_dgi5k"),
-&"door3_SM001": SubResource("Animation_j8jky"),
-&"door6_SM": SubResource("Animation_pibwh"),
-&"door_open": SubResource("Animation_yq6so")
+&"door3_SM001": SubResource("Animation_j8jky")
 }
 
 [sub_resource type="Animation" id="Animation_fuf3a"]
@@ -708,12 +708,14 @@ size = Vector3(274.216, 141.417, 157.117)
 layer = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+visible = false
 offset_left = 32.0
 offset_top = -39.0
 offset_right = 273.0
 offset_bottom = 93.0
 
 [node name="BatteryLevel" type="Label" parent="CanvasLayer/MarginContainer"]
+visible = false
 layout_mode = 2
 text = "Flashlight Battery: 100%"
 
@@ -900,6 +902,7 @@ stream = ExtResource("23_32suv")
 volume_db = -3.0
 
 [node name="Door6" parent="NavigationRegion3D/Hospital8Room" instance=ExtResource("21_pm3ni")]
+is_locked = true
 
 [node name="door6_SM" parent="NavigationRegion3D/Hospital8Room/Door6" instance=ExtResource("12_tel4y")]
 transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01, -2.53518e-08, 0.01, 3.61999e-08, 18.72, 6, -1.2156)
@@ -914,6 +917,7 @@ stream = ExtResource("23_32suv")
 volume_db = -3.0
 
 [node name="Door6_1" parent="NavigationRegion3D/Hospital8Room" instance=ExtResource("21_pm3ni")]
+is_locked = true
 
 [node name="door6_SM001" parent="NavigationRegion3D/Hospital8Room/Door6_1" instance=ExtResource("13_qkpxi")]
 transform = Transform3D(0.01, 0, 0, 0, -3.61999e-08, 0.01, 0, -0.01, -3.61999e-08, 18.72, 6, 1.039)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://3pmq78q3eror"]
 
-[ext_resource type="Script" uid="uid://b1n243isgx4gb" path="res://scripts/player.gd" id="1_4flbx"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_4flbx"]
 [ext_resource type="AudioStream" uid="uid://dw5odwvn64hqf" path="res://assets/sounds/heavy-footsteps-walking-35722.mp3" id="2_3v82h"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ym1g6"]
@@ -21,9 +21,8 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 
 target_position = Vector3(2.5, -1, 0)
 
 [node name="Flashlight" type="SpotLight3D" parent="Camera3D"]
-visible = false
-spot_range = 7.77697
-spot_angle = 19.4347
+spot_range = 23.234
+spot_angle = 14.4593
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_3v82h")

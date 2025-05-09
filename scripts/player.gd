@@ -16,7 +16,8 @@ extends CharacterBody3D
 
 const GRAVITY = 2
 const JUMP = 5
-
+enum FlashlightMode { NORMAL, UV }
+var flashlight_mode: FlashlightMode = FlashlightMode.NORMAL
 var battery_level = battery_max
 var flashlight_on: bool = false
 var yaw = 0.0
@@ -37,9 +38,15 @@ func _input(event):
 		$Camera3D.rotation_degrees = Vector3(pitch, 0, 0)
 		rotation_degrees.y = yaw
 
-	if Input.is_action_just_pressed("flashlight") and battery_level > 0 and not is_hidden:
+	if Input.is_action_just_pressed("flashlight") and not is_hidden:
 		flashlight_on = !flashlight_on
 		player_flashlight.visible = flashlight_on
+		if flashlight_on:
+			update_flashlight_color()
+			
+	if Input.is_action_just_pressed("toggle_flashlight_mode") and flashlight_on:
+		flashlight_mode = FlashlightMode.UV if flashlight_mode == FlashlightMode.NORMAL else FlashlightMode.NORMAL
+		update_flashlight_color()
 
 func _physics_process(delta):
 	if not is_hidden:
@@ -81,19 +88,11 @@ func _physics_process(delta):
 			toggle_hide_camera(current_hidden_camera)
 		else:
 			handle_interact()
-
-	# Reset when key is released
+			
 	if not Input.is_action_pressed("interact"):
 		interaction_handled = false
 
-	if flashlight_on:
-		battery_level -= battery_drain_rate * delta
-		battery_level = max(battery_level, 0)
-		if battery_level <= 0:
-			flashlight_on = false
-			player_flashlight.visible = false
-
-		update_battery_ui()
+	
 
 func handle_interact():
 	if interact_ray.is_colliding():
@@ -119,6 +118,10 @@ func toggle_hide_camera(hidden_camera: Camera3D):
 		hidden_camera.current = true
 		current_hidden_camera = hidden_camera
 		is_hidden = true
-
-func update_battery_ui():
-	flashlight_battery.text = "Battery: %d%%" % int((battery_level / battery_max) * 100)
+		
+func update_flashlight_color():
+	match flashlight_mode:
+		FlashlightMode.NORMAL:
+			player_flashlight.light_color = Color(1.0, 1.0, 1.0) # White
+		FlashlightMode.UV:
+			player_flashlight.light_color = Color(1.0, 0.0, 1.0) # Purple
