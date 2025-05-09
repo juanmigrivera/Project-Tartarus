@@ -6,8 +6,8 @@ extends CharacterBody3D
 @onready var footstep_sounds = $AudioStreamPlayer3D
 @onready var normal_camera = $Camera3D
 @onready var collision_shape = $CollisionShape3D
-@onready var player_mesh = $MeshInstance3D # adjust this if needed
-
+@onready var player_mesh = $"." 
+@onready var inventory_ui = $"../CanvasLayer/InventoryBar"
 @export var speed : int = 2.0
 @export var mouse_sensitivity : float = 0.05
 @export var interact_distance : float = 2.5
@@ -22,7 +22,7 @@ var battery_level = battery_max
 var flashlight_on: bool = false
 var yaw = 0.0
 var pitch = 0.0
-
+var keycard_pieces_collected = 0
 var is_hidden: bool = false
 var current_hidden_camera: Camera3D = null
 var interaction_handled: bool = false
@@ -37,6 +37,9 @@ func _input(event):
 		pitch = clamp(pitch, -90, 90)
 		$Camera3D.rotation_degrees = Vector3(pitch, 0, 0)
 		rotation_degrees.y = yaw
+		
+	if event.is_action_pressed("Inventory"):
+		inventory_ui.visible = !inventory_ui.visible
 
 	if Input.is_action_just_pressed("flashlight") and not is_hidden:
 		flashlight_on = !flashlight_on
@@ -125,3 +128,7 @@ func update_flashlight_color():
 			player_flashlight.light_color = Color(1.0, 1.0, 1.0) # White
 		FlashlightMode.UV:
 			player_flashlight.light_color = Color(1.0, 0.0, 1.0) # Purple
+			
+func collect_keycard_piece():
+	keycard_pieces_collected += 1
+	print("Collected piece! Total: %d" % keycard_pieces_collected)

@@ -1,5 +1,7 @@
-[gd_scene load_steps=84 format=3 uid="uid://bq4ywxaybmdxg"]
+[gd_scene load_steps=96 format=3 uid="uid://bq4ywxaybmdxg"]
 
+[ext_resource type="Texture2D" uid="uid://b0amlji66pop" path="res://assets/SCP Cards/SCP Card Logo.png" id="1_h2b84"]
+[ext_resource type="Texture2D" uid="uid://b6vny41y2b668" path="res://assets/SCP Cards/InventorySlot.png" id="2_mp4yc"]
 [ext_resource type="PackedScene" uid="uid://3pmq78q3eror" path="res://scenes/player.tscn" id="2_s6fyp"]
 [ext_resource type="PackedScene" uid="uid://bw71rrctam3n4" path="res://scenes/door_3_sm_001.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://bqicy61cpspqm" path="res://scenes/door_4_sm.tscn" id="3_jscy8"]
@@ -29,7 +31,32 @@
 [ext_resource type="Script" path="res://scripts/Enemy_Walking.gd" id="26_vxglm"]
 [ext_resource type="PackedScene" uid="uid://di4llnlswp4ym" path="res://assets/Enemy/blob_monster.glb" id="27_2f3dj"]
 [ext_resource type="PackedScene" uid="uid://de181tmdtxj01" path="res://old_and_worn_out_hospital_bed/scene.gltf" id="30_fv21b"]
+[ext_resource type="PackedScene" uid="uid://byhpx0n20sunm" path="res://scenes/level_1_SCP_Card.tscn" id="31_l5hve"]
 [ext_resource type="Script" path="res://old_and_worn_out_hospital_bed/bed.gd" id="31_tel4y"]
+[ext_resource type="PackedScene" uid="uid://cyo74ygqeml62" path="res://scenes/level_2_SCP_Card.tscn" id="34_kpnjq"]
+[ext_resource type="PackedScene" uid="uid://ovnuh833g6hn" path="res://scenes/level_3_SCP_Card.tscn" id="35_5an74"]
+[ext_resource type="PackedScene" uid="uid://dsua5kasct6os" path="res://scenes/level_4_SCP_Card.tscn" id="36_eo1lw"]
+[ext_resource type="PackedScene" uid="uid://dn0yud6pchsvd" path="res://scenes/level_5_SCP_Card.tscn" id="37_k43sp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02fca"]
+atlas = ExtResource("1_h2b84")
+region = Rect2(38.9299, 89.19, 245.63, 150.04)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ut2e"]
+atlas = ExtResource("1_h2b84")
+region = Rect2(296.66, 84.35, 248.05, 158.51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhusn"]
+atlas = ExtResource("1_h2b84")
+region = Rect2(562.86, 86.77, 240.79, 157.3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnd5l"]
+atlas = ExtResource("1_h2b84")
+region = Rect2(179.29, 251.33, 246.84, 153.67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gvgi"]
+atlas = ExtResource("1_h2b84")
+region = Rect2(435.81, 252.54, 250.47, 153.67)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ac04k"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -73,6 +100,66 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(-1.5708, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pibwh"]
+resource_name = "door6_SM"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Door6_1/door6_SM001:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dgi5k"]
+resource_name = "door3_SM"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j8jky"]
+resource_name = "door3_SM001"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_qkpxi"]
@@ -130,66 +217,6 @@ tracks/0/keys = {
 "values": [Vector3(-1.5708, 0, -1.5708), Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, -1.5708)]
 }
 
-[sub_resource type="Animation" id="Animation_dgi5k"]
-resource_name = "door3_SM"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_j8jky"]
-resource_name = "door3_SM001"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_pibwh"]
-resource_name = "door6_SM"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../Door6_1/door6_SM001:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_yq6so"]
 resource_name = "door_open"
 length = 2.0
@@ -215,14 +242,14 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tel4y"]
 _data = {
-&"RESET": SubResource("Animation_tel4y"),
-&"door6_SM": SubResource("Animation_pibwh"),
+&"door_open": SubResource("Animation_yq6so"),
 &"door1_SM001": SubResource("Animation_5q0nq"),
 &"door2_SM": SubResource("Animation_fv21b"),
-&"door_open": SubResource("Animation_yq6so"),
-&"door1_SM": SubResource("Animation_qkpxi"),
 &"door3_SM": SubResource("Animation_dgi5k"),
-&"door3_SM001": SubResource("Animation_j8jky")
+&"door6_SM": SubResource("Animation_pibwh"),
+&"door1_SM": SubResource("Animation_qkpxi"),
+&"door3_SM001": SubResource("Animation_j8jky"),
+&"RESET": SubResource("Animation_tel4y")
 }
 
 [sub_resource type="Animation" id="Animation_fuf3a"]
@@ -258,8 +285,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pibwh"]
 _data = {
-&"RESET": SubResource("Animation_fuf3a"),
-&"door3_SM002": SubResource("Animation_kmb1v")
+&"door3_SM002": SubResource("Animation_kmb1v"),
+&"RESET": SubResource("Animation_fuf3a")
 }
 
 [sub_resource type="Animation" id="Animation_5he1u"]
@@ -295,8 +322,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5poiv"]
 _data = {
-&"RESET": SubResource("Animation_5he1u"),
-&"door3_SM003": SubResource("Animation_c6pm6")
+&"door3_SM003": SubResource("Animation_c6pm6"),
+&"RESET": SubResource("Animation_5he1u")
 }
 
 [sub_resource type="Animation" id="Animation_chjal"]
@@ -332,8 +359,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cjqg0"]
 _data = {
-&"RESET": SubResource("Animation_chjal"),
-&"door3_SM004": SubResource("Animation_2cjbq")
+&"door3_SM004": SubResource("Animation_2cjbq"),
+&"RESET": SubResource("Animation_chjal")
 }
 
 [sub_resource type="Animation" id="Animation_txyw0"]
@@ -369,8 +396,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vc5cj"]
 _data = {
-&"RESET": SubResource("Animation_txyw0"),
-&"door3_SM005": SubResource("Animation_vchkt")
+&"door3_SM005": SubResource("Animation_vchkt"),
+&"RESET": SubResource("Animation_txyw0")
 }
 
 [sub_resource type="Animation" id="Animation_ty1g6"]
@@ -406,8 +433,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j2jfr"]
 _data = {
-&"RESET": SubResource("Animation_ty1g6"),
-&"door3_SM006": SubResource("Animation_nvyfr")
+&"door3_SM006": SubResource("Animation_nvyfr"),
+&"RESET": SubResource("Animation_ty1g6")
 }
 
 [sub_resource type="Animation" id="Animation_bu4jf"]
@@ -443,8 +470,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o7ddy"]
 _data = {
-&"RESET": SubResource("Animation_bu4jf"),
-&"door3_SM007": SubResource("Animation_bjg73")
+&"door3_SM007": SubResource("Animation_bjg73"),
+&"RESET": SubResource("Animation_bu4jf")
 }
 
 [sub_resource type="Animation" id="Animation_ids8r"]
@@ -480,8 +507,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dnhof"]
 _data = {
-&"RESET": SubResource("Animation_ids8r"),
-&"door4_SM": SubResource("Animation_0loja")
+&"door4_SM": SubResource("Animation_0loja"),
+&"RESET": SubResource("Animation_ids8r")
 }
 
 [sub_resource type="Animation" id="Animation_cjqg0"]
@@ -541,8 +568,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vchkt"]
 _data = {
-&"RESET": SubResource("Animation_cjqg0"),
-&"door6_SM001": SubResource("Animation_5poiv")
+&"door6_SM001": SubResource("Animation_5poiv"),
+&"RESET": SubResource("Animation_cjqg0")
 }
 
 [sub_resource type="Animation" id="Animation_vc5cj"]
@@ -578,8 +605,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nvyfr"]
 _data = {
-&"RESET": SubResource("Animation_vc5cj"),
-&"door6_SM002": SubResource("Animation_2f3dj")
+&"door6_SM002": SubResource("Animation_2f3dj"),
+&"RESET": SubResource("Animation_vc5cj")
 }
 
 [sub_resource type="Animation" id="Animation_o7ddy"]
@@ -615,8 +642,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0loja"]
 _data = {
-&"RESET": SubResource("Animation_o7ddy"),
-&"door3_SM009": SubResource("Animation_j2jfr")
+&"door3_SM009": SubResource("Animation_j2jfr"),
+&"RESET": SubResource("Animation_o7ddy")
 }
 
 [sub_resource type="Animation" id="Animation_1v6qk"]
@@ -652,8 +679,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_augu2"]
 _data = {
-&"RESET": SubResource("Animation_1v6qk"),
-&"door3_SM011": SubResource("Animation_dnhof")
+&"door3_SM011": SubResource("Animation_dnhof"),
+&"RESET": SubResource("Animation_1v6qk")
 }
 
 [sub_resource type="Animation" id="Animation_kf5aa"]
@@ -689,8 +716,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t5ykj"]
 _data = {
-&"RESET": SubResource("Animation_kf5aa"),
-&"door7_SM": SubResource("Animation_tm6hj")
+&"door7_SM": SubResource("Animation_tm6hj"),
+&"RESET": SubResource("Animation_kf5aa")
 }
 
 [sub_resource type="BoxMesh" id="BoxMesh_yq6so"]
@@ -718,6 +745,84 @@ offset_bottom = 93.0
 visible = false
 layout_mode = 2
 text = "Flashlight Battery: 100%"
+
+[node name="InventoryBar" type="HBoxContainer" parent="CanvasLayer"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -303.0
+offset_top = -127.0
+offset_right = 973.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.421489, 0.364309)
+alignment = 1
+
+[node name="Level1Logo" type="TextureRect" parent="CanvasLayer/InventoryBar"]
+visible = false
+layout_mode = 2
+texture = SubResource("AtlasTexture_02fca")
+stretch_mode = 3
+
+[node name="Level2Logo" type="TextureRect" parent="CanvasLayer/InventoryBar"]
+visible = false
+layout_mode = 2
+texture = SubResource("AtlasTexture_8ut2e")
+stretch_mode = 3
+
+[node name="Level3Logo" type="TextureRect" parent="CanvasLayer/InventoryBar"]
+visible = false
+layout_mode = 2
+texture = SubResource("AtlasTexture_hhusn")
+stretch_mode = 3
+
+[node name="Level4Logo" type="TextureRect" parent="CanvasLayer/InventoryBar"]
+visible = false
+layout_mode = 2
+texture = SubResource("AtlasTexture_vnd5l")
+stretch_mode = 3
+
+[node name="Level5Logo" type="TextureRect" parent="CanvasLayer/InventoryBar"]
+visible = false
+layout_mode = 2
+texture = SubResource("AtlasTexture_3gvgi")
+stretch_mode = 3
+
+[node name="PlaceHolder1" type="TextureRect" parent="CanvasLayer/InventoryBar"]
+layout_mode = 2
+texture = ExtResource("2_mp4yc")
+
+[node name="PlaceHolder2" type="TextureRect" parent="CanvasLayer/InventoryBar"]
+layout_mode = 2
+texture = ExtResource("2_mp4yc")
+
+[node name="PlaceHolder3" type="TextureRect" parent="CanvasLayer/InventoryBar"]
+layout_mode = 2
+texture = ExtResource("2_mp4yc")
+
+[node name="PlaceHolder4" type="TextureRect" parent="CanvasLayer/InventoryBar"]
+layout_mode = 2
+texture = ExtResource("2_mp4yc")
+
+[node name="PlaceHolder5" type="TextureRect" parent="CanvasLayer/InventoryBar"]
+layout_mode = 2
+texture = ExtResource("2_mp4yc")
+
+[node name="PlaceHolder6" type="TextureRect" parent="CanvasLayer/InventoryBar"]
+layout_mode = 2
+texture = ExtResource("2_mp4yc")
+
+[node name="PlaceHolder7" type="TextureRect" parent="CanvasLayer/InventoryBar"]
+layout_mode = 2
+texture = ExtResource("2_mp4yc")
+
+[node name="PlaceHolder8" type="TextureRect" parent="CanvasLayer/InventoryBar"]
+layout_mode = 2
+texture = ExtResource("2_mp4yc")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_kk85q")
@@ -1114,3 +1219,18 @@ shape = SubResource("BoxShape3D_fv21b")
 
 [node name="BedCamera" type="Camera3D" parent="Bed"]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 10, 15, -10)
+
+[node name="Level 1 SCP Card" parent="." instance=ExtResource("31_l5hve")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -48.9096, 11.2057, 20.5125)
+
+[node name="Level 2 SCP Card" parent="." instance=ExtResource("34_kpnjq")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -46.7789, 11.2005, 20.5004)
+
+[node name="Level 3 SCP Card" parent="." instance=ExtResource("35_5an74")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -43.8171, 11.2243, 20.6222)
+
+[node name="Level 4 SCP Card" parent="." instance=ExtResource("36_eo1lw")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -40.1442, 11.224, 20.622)
+
+[node name="Level 5 SCP Card" parent="." instance=ExtResource("37_k43sp")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -37.8935, 11.224, 20.622)
