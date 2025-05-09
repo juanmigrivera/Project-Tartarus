@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://ovnuh833g6hn"]
+
+[ext_resource type="PackedScene" uid="uid://l6uuf1nv0kfe" path="res://assets/SCP Cards/scene.gltf" id="1_4qsq4"]
+[ext_resource type="Script" path="res://scripts/level_3_scp_card.gd" id="2_r0s8h"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_m0tt2"]
+data = PackedVector3Array(257.217, -124.45, 0, 260.967, 135.8, 0, 257.217, 124.55, 0, 257.217, -124.45, 0, 272.217, 139.55, 0, 260.967, 135.8, 0, 272.217, 139.55, 0, 703.467, 135.8, 0, 692.217, 139.55, 0, 272.217, 139.55, 0, 707.217, 124.55, 0, 703.467, 135.8, 0, 257.217, -124.45, 0, 707.217, 124.55, 0, 272.217, 139.55, 0, 257.217, -124.45, 0, 692.217, -139.45, 0, 707.217, 124.55, 0, 260.967, -135.7, 0, 692.217, -139.45, 0, 257.217, -124.45, 0, 272.217, -139.45, 0, 692.217, -139.45, 0, 260.967, -135.7, 0, 707.217, 124.55, 0, 692.217, -139.45, 0, 703.467, -135.7, 0, 707.217, 124.55, 0, 703.467, -135.7, 0, 707.217, -124.45, 0)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5ya8y"]
+
+[node name="Level2" instance=ExtResource("1_4qsq4")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+script = ExtResource("2_r0s8h")
+
+[node name="Sketchfab_model" parent="." index="0"]
+transform = Transform3D(0.08, 0, 0, 0, -3.49691e-09, 0.08, 0, -0.08, -3.49691e-09, 0, 0, 0)
+
+[node name="Level2" parent="Sketchfab_model/SCP Keycards_FBX/RootNode" index="0"]
+visible = false
+
+[node name="Level1" parent="Sketchfab_model/SCP Keycards_FBX/RootNode" index="1"]
+visible = false
+
+[node name="Card_Collision" type="StaticBody3D" parent="Sketchfab_model/SCP Keycards_FBX/RootNode/Level3/Level3_08 - Default_0" index="0"]
+transform = Transform3D(1, -3.38813e-21, 0, 0, 1, 4.26326e-14, 0, -4.26326e-14, 1, -966.703, 0, 0.000145912)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/SCP Keycards_FBX/RootNode/Level3/Level3_08 - Default_0/Card_Collision" index="0"]
+transform = Transform3D(1, 0, 0, -3.38813e-21, 1, 0, 0, 0, 1, 4.9104, 0, -9.53674e-07)
+shape = SubResource("ConcavePolygonShape3D_m0tt2")
+
+[node name="InteractArea" type="Area3D" parent="Sketchfab_model/SCP Keycards_FBX/RootNode/Level3/Level3_08 - Default_0" index="1"]
+transform = Transform3D(1, -3.38813e-21, 0, 0, 1, 4.26326e-14, 0, -4.26326e-14, 1, -991.362, 0, 0.000149727)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/SCP Keycards_FBX/RootNode/Level3/Level3_08 - Default_0/InteractArea" index="0"]
+transform = Transform3D(3000, -6.93889e-18, -2.91038e-11, 0, 3000, 0, 2.91038e-11, 0, 3000, 499.707, 0, -7.53403e-05)
+shape = SubResource("SphereShape3D_5ya8y")
+
+[node name="Level4" parent="Sketchfab_model/SCP Keycards_FBX/RootNode" index="3"]
+visible = false
+
+[node name="Level5" parent="Sketchfab_model/SCP Keycards_FBX/RootNode" index="4"]
+visible = false
+
+[node name="PickUpLabel" type="Label3D" parent="." index="1"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 40.443, 17.1211, 13.813)
+visible = false
+text = "Press E to Pick Up"
+font_size = 35
+
+[connection signal="body_entered" from="Sketchfab_model/SCP Keycards_FBX/RootNode/Level3/Level3_08 - Default_0/InteractArea" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Sketchfab_model/SCP Keycards_FBX/RootNode/Level3/Level3_08 - Default_0/InteractArea" to="." method="_on_interact_area_body_exited"]
