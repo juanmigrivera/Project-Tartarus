@@ -331,16 +331,22 @@ parameters/looping = true
 
 [node name="8 puzzle final door" parent="." instance=ExtResource("23_61q37")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4182, 10.5215, 18.874)
+open_angle = null
+is_open = null
+is_locked = null
+open_speed = null
 levers = Array[NodePath]([NodePath("../LeftLevers/Lever"), NodePath("../LeftLevers/Lever2"), NodePath("../LeftLevers/Lever3"), NodePath("../LeftLevers/Lever4"), NodePath("../RightLevers/Lever5"), NodePath("../RightLevers/Lever6"), NodePath("../RightLevers/Lever7"), NodePath("../RightLevers/Lever8")])
 
 [node name="target2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.347, 11.2, 21.1)
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="target2"]
 mesh = SubResource("BoxMesh_yq6so")
 
 [node name="target" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.907, 11.2, 21.1)
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="target"]
 mesh = SubResource("BoxMesh_fv21b")
