@@ -23,6 +23,8 @@ var flashlight_on: bool = false
 var yaw = 0.0
 var pitch = 0.0
 var keycard_pieces_collected = 0
+var keycard_pieces_swiped:= 0
+const total_keycards:=5
 var is_hidden: bool = false
 var current_hidden_camera: Camera3D = null
 var interaction_handled: bool = false
@@ -132,3 +134,10 @@ func update_flashlight_color():
 func collect_keycard_piece():
 	keycard_pieces_collected += 1
 	print("Collected piece! Total: %d" % keycard_pieces_collected)
+	
+func swipe_keycard():
+	if keycard_pieces_swiped < keycard_pieces_collected:
+		keycard_pieces_swiped += 1
+		print("Swiped card %d/%d" % [keycard_pieces_swiped, total_keycards])
+	else:
+		print("All cards already swiped.")
