@@ -22,6 +22,7 @@ func _physics_process(delta):
 		var collision = move_and_collide(velocity * delta)
 		if collision:
 			print("I collided with ", collision.get_collider().name)
+			get_tree().change_scene_to_file("res://scenes/Menus/lose_screen.tscn")
 	else:
 		going_to_b = !going_to_b
 		if(going_to_b):
