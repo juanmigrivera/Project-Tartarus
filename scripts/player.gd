@@ -2,7 +2,6 @@ extends CharacterBody3D
 
 @onready var interact_ray = $Camera3D/RayCast3D
 @onready var player_flashlight = $Camera3D/Flashlight
-@onready var flashlight_battery = $"../CanvasLayer/MarginContainer/BatteryLevel"
 @onready var footstep_sounds = $AudioStreamPlayer3D
 @onready var normal_camera = $Camera3D
 @onready var collision_shape = $CollisionShape3D
@@ -28,9 +27,11 @@ const total_keycards:=5
 var is_hidden: bool = false
 var current_hidden_camera: Camera3D = null
 var interaction_handled: bool = false
+var can_move := true
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	add_to_group("player")
 
 func _input(event):
 	if event is InputEventMouseMotion and not is_hidden:
@@ -141,3 +142,6 @@ func swipe_keycard():
 		print("Swiped card %d/%d" % [keycard_pieces_swiped, total_keycards])
 	else:
 		print("All cards already swiped.")
+		
+func is_flashlight_uv() -> bool:
+	return flashlight_mode == FlashlightMode.UV and flashlight_on
