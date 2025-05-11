@@ -20,11 +20,11 @@
 [ext_resource type="PackedScene" uid="uid://dduskioa552fi" path="res://scenes/door_3_sm_011.tscn" id="16_j8jky"]
 [ext_resource type="PackedScene" uid="uid://c61tcw82phyo2" path="res://scenes/door_5_sm_001.tscn" id="17_kmb1v"]
 [ext_resource type="PackedScene" uid="uid://crf4fj1ja76ch" path="res://scenes/door_1_sm.tscn" id="18_fuf3a"]
-[ext_resource type="Script" uid="uid://do7ba220b7jlf" path="res://scripts/SCP_FinalDoor.gd" id="19_okk03"]
+[ext_resource type="Script" uid="uid://c8kv3utt10t43" path="res://scripts/SCP_FinalDoor.gd" id="19_okk03"]
 [ext_resource type="PackedScene" uid="uid://dls2xa8ueyxf8" path="res://scenes/door_7_sm.tscn" id="19_pibwh"]
 [ext_resource type="PackedScene" uid="uid://c060wt20ghv83" path="res://scenes/door_1_sm_001.tscn" id="20_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://b6pib3bv8tk5m" path="res://scenes/door_2_sm.tscn" id="21_5he1u"]
-[ext_resource type="Script" uid="uid://biufiao4tshl2" path="res://scripts/SCPFinalDoor2.gd" id="21_bx44k"]
+[ext_resource type="Script" uid="uid://dq3fddtf7jecw" path="res://scripts/SCPFinalDoor2.gd" id="21_bx44k"]
 [ext_resource type="PackedScene" uid="uid://bsfh8ib7bvyn3" path="res://scenes/door.tscn" id="21_pm3ni"]
 [ext_resource type="AudioStream" uid="uid://c5qohfpad268j" path="res://assets/sounds/door_creak_open.wav" id="23_32suv"]
 [ext_resource type="PackedScene" uid="uid://b8llfttbrpjrr" path="res://scenes/8_room_PuzzleFinalDoor.tscn" id="23_61q37"]
@@ -737,10 +737,7 @@ size = Vector3(274.216, 141.417, 157.117)
 
 [node name="EnemyAI" parent="." instance=ExtResource("1_5poiv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3069, 7.36041, 14.5189)
-speed = 4
-chase_speed = 6
 detection_range = 10
-wander_time = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 0
@@ -1250,3 +1247,6 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 1.48927, 7.5, -2)
 
 [node name="CardReader" parent="." instance=ExtResource("39_lec1n")]
 transform = Transform3D(-1.31134e-08, -0.3, 1.31134e-08, 0, -1.31134e-08, -0.3, 0.3, -1.31134e-08, 5.73206e-16, 18.3567, 7.33256, -1.78819)
+
+[editable path="EnemyAI"]
+[editable path="EnemyAI/GameDesignBlob"]
