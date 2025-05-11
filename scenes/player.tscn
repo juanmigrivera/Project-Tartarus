@@ -22,6 +22,7 @@ target_position = Vector3(2.5, -1, 0)
 
 [node name="Flashlight" type="SpotLight3D" parent="Camera3D"]
 visible = false
+light_cull_mask = 4293918723
 spot_range = 23.234
 spot_angle = 21.7745
 
