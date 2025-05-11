@@ -18,6 +18,7 @@ func _on_player_interact():
 	if is_locked:
 		return
 	else:
+		door_sound.play()
 		animation.play(real_door.name)
 func get_door_node():
 	for child in get_children():

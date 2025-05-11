@@ -8,7 +8,7 @@ extends CharacterBody3D
 @export var wander_time: int = 2
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
-@onready var player: Node3D = get_node("/root/CharacterBody3d")
+@onready var player: Node3D = get_node("/root/scenes/player")
 
 enum State { WANDER, CHASE }
 var state: State = State.WANDER
@@ -70,6 +70,6 @@ func _set_new_wander_target():
 
 func _on_area_3d_body_entered(body):
 	if body.name == "Player":
-		# PLEASE PUT WHATEVER HAPPENS WHEN THE PLAYER IS TOUCHED BY THE ENEMY HERE
 		print("Player loses!") 
-		get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://scenes/Menus/lose_screen.tscn")
+		
