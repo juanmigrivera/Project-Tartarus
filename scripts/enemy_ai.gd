@@ -70,6 +70,6 @@ func _set_new_wander_target():
 
 func _on_area_3d_body_entered(body):
 	if body.name == "Player":
-		# PLEASE PUT WHATEVER HAPPENS WHEN THE PLAYER IS TOUCHED BY THE ENEMY HERE
 		print("Player loses!") 
-		get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://scenes/Menus/lose_screen.tscn")
+		
