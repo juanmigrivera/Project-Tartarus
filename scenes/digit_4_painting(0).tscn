@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://ldug80g7fcc5"]
+
+[ext_resource type="PackedScene" uid="uid://jv6mb4qsnx7i" path="res://assets/Paintings/scene.gltf" id="1_gfmgo"]
+[ext_resource type="PackedScene" uid="uid://b6ccat0hembx7" path="res://scenes/hiddenMessage0.tscn" id="2_6qwa5"]
+
+[node name="Digit 1 Painting" instance=ExtResource("1_gfmgo")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="Plane_003_0" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="0"]
+visible = false
+
+[node name="Plane_001_1" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="1"]
+visible = false
+
+[node name="Plane_004_3" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="3"]
+visible = false
+
+[node name="Plane_005_4" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="4"]
+visible = false
+
+[node name="Plane_006_5" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="5"]
+visible = false
+
+[node name="Plane_007_6" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="6"]
+visible = false
+
+[node name="Plane_008_7" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="7"]
+visible = false
+
+[node name="Node3D" parent="." index="1" instance=ExtResource("2_6qwa5")]
+transform = Transform3D(0.94335, -0.331799, 0, 0.331799, 0.94335, 0, 0, 0, 1, -8.73382, -3.25638, 0.176771)
