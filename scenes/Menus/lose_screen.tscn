@@ -1,9 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkhaj04w6otbc"]
+[gd_scene load_steps=8 format=3 uid="uid://dkhaj04w6otbc"]
 
-[ext_resource type="Script" uid="uid://chutcycfn81bo" path="res://lose_screen.gd" id="1_0yxjb"]
-[ext_resource type="Texture2D" uid="uid://c0sd1fclclcts" path="res://assets/menu/blood-splash-assassin-style-background-600nw-1558640510.png" id="2_0v0kj"]
+[ext_resource type="Script" path="res://lose_screen.gd" id="1_0yxjb"]
+[ext_resource type="Texture2D" uid="uid://mncjprmpprdx" path="res://assets/menu/GameOver/frame_0_delay-0.1s.png" id="2_cpv4y"]
+[ext_resource type="Texture2D" uid="uid://dltt57p1x1f71" path="res://assets/menu/GameOver/frame_1_delay-0.1s.png" id="3_787nb"]
+[ext_resource type="Texture2D" uid="uid://bityjl7sni504" path="res://assets/menu/GameOver/frame_2_delay-0.1s.png" id="4_spkuv"]
+[ext_resource type="FontFile" uid="uid://c5jhp80a4joue" path="res://assets/Fonts/BloodScratch-LRJZ.ttf" id="5_mpl4s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w0chc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cpv4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_787nb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_spkuv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fyk4r"]
+font = ExtResource("5_mpl4s")
 font_size = 100
 
 [node name="LoseScreen" type="Control"]
@@ -16,11 +37,12 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_0yxjb")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 1154.0
-offset_bottom = 646.0
-texture = ExtResource("2_0v0kj")
+[node name="TextureRect" type="AnimatedSprite2D" parent="."]
+position = Vector2(960.322, 556.295)
+scale = Vector2(9.72678, 7.3164)
+sprite_frames = SubResource("SpriteFrames_w0chc")
+autoplay = "default"
+frame_progress = 0.368547
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -43,17 +65,13 @@ text = "Return To Menu"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = -11.5
-offset_right = 35.0
-offset_bottom = 11.5
+offset_left = -241.5
+offset_right = 241.5
+offset_bottom = 174.0
 grow_horizontal = 2
-grow_vertical = 2
 text = "You Lose"
 label_settings = SubResource("LabelSettings_fyk4r")
 
