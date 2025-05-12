@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://bq4ywxaybmdxg"]
+[gd_scene load_steps=101 format=3 uid="uid://bq4ywxaybmdxg"]
 
 [ext_resource type="PackedScene" uid="uid://d3i76yu5iej28" path="res://scenes/enemy_ai.tscn" id="1_5poiv"]
 [ext_resource type="Texture2D" uid="uid://b0amlji66pop" path="res://assets/SCP Cards/SCP Card Logo.png" id="1_h2b84"]
@@ -836,7 +836,9 @@ texture = ExtResource("2_mp4yc")
 environment = SubResource("Environment_kk85q")
 
 [node name="Player" parent="." instance=ExtResource("2_s6fyp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1501, 8.28861, 23.9808)
+
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.7462, 7.39692, -4.87182)
+
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.947768, 0, 0.318959, 0, 1, 0, -0.318959, 0, -0.947768, -52.27, 10.665, 22.965)
