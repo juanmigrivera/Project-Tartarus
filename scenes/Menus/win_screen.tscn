@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://csnil21ajoncf"]
+
+[ext_resource type="Script" uid="uid://c52qgttggp7mq" path="res://win_screen.gd" id="1_2lqui"]
+[ext_resource type="Texture2D" uid="uid://djwga3ayxd8fk" path="res://assets/menu/hartwood-hospital-abandoned-psychiatric-asylum-600nw-1432467659.png" id="2_24em6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xuiac"]
+font_size = 50
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2lqui")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1160.0
+offset_bottom = 646.0
+texture = ExtResource("2_24em6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.5
+offset_top = -40.0
+offset_right = 66.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ReturnButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Return To Menu"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.0
+offset_top = -34.5
+offset_right = 158.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "You Escaped!"
+label_settings = SubResource("LabelSettings_xuiac")
+
+[connection signal="pressed" from="VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]
