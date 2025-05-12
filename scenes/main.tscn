@@ -1254,7 +1254,7 @@ volume_db = -5.0
 autoplay = true
 max_distance = 30.0
 
-[node name="Enemy2" parent="." node_paths=PackedStringArray("target_a", "target_b") instance=ExtResource("31_vc5cj")]
+[node name="Enemy2" parent="." instance=ExtResource("31_vc5cj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.056, 11.2, 20.345)
 target_a = NodePath("../target")
 target_b = NodePath("../target2")
