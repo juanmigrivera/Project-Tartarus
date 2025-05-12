@@ -2,10 +2,10 @@ extends Node3D
 
 @onready var hide_area = $HideTriggerArea
 @onready var hidden_camera = $BedCamera
+@onready var enemy = $"../EnemyAI"
 
-var player_in_range = false
 var player = null
-var is_hiding: bool = false
+var player_in_range = false
 var yaw: float = 0.0
 var mouse_sensitivity: float = 0.05
 
@@ -29,10 +29,15 @@ func _on_player_interact():
 	if player_in_range and player:
 		print("Calling toggle_hide_camera with:", hidden_camera)
 		player.toggle_hide_camera(hidden_camera)
-		is_hiding = not is_hiding
 		yaw = hidden_camera.rotation_degrees.y
+		if player.is_hidden:
+			enemy.detection_range = 0.0
+			enemy.kill = false
+		else:
+			enemy.detection_range = 10.0
+			enemy.kill = true
 
 func _input(event):
-	if is_hiding and event is InputEventMouseMotion:
+	if player and player.is_hidden and event is InputEventMouseMotion:
 		yaw -= event.relative.x * mouse_sensitivity
 		hidden_camera.rotation_degrees = Vector3(0, yaw, 0)
