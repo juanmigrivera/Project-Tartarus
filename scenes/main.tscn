@@ -1,8 +1,9 @@
-[gd_scene load_steps=104 format=3 uid="uid://bq4ywxaybmdxg"]
+[gd_scene load_steps=110 format=3 uid="uid://bq4ywxaybmdxg"]
 
 [ext_resource type="PackedScene" uid="uid://d3i76yu5iej28" path="res://scenes/enemy_ai.tscn" id="1_5poiv"]
 [ext_resource type="Texture2D" uid="uid://b0amlji66pop" path="res://assets/SCP Cards/SCP Card Logo.png" id="1_h2b84"]
 [ext_resource type="PackedScene" uid="uid://3pmq78q3eror" path="res://scenes/player.tscn" id="1_nvyfr"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_orqj0"]
 [ext_resource type="Texture2D" uid="uid://b6vny41y2b668" path="res://assets/SCP Cards/InventorySlot.png" id="2_mp4yc"]
 [ext_resource type="PackedScene" uid="uid://bw71rrctam3n4" path="res://scenes/door_3_sm_001.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://bqicy61cpspqm" path="res://scenes/door_4_sm.tscn" id="3_jscy8"]
@@ -11,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://bfdf5pyg13by4" path="res://scenes/door_3_sm.tscn" id="4_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://civn1bgydoyqv" path="res://scenes/door_3_sm_002.tscn" id="5_y6deb"]
 [ext_resource type="PackedScene" uid="uid://cyj8ekt8qhdgl" path="res://scenes/door_3_sm_003.tscn" id="6_og1vs"]
+[ext_resource type="Script" path="res://scripts/Dialogue1.gd" id="7_lr58f"]
+[ext_resource type="FontFile" uid="uid://dtc243ajhjsgk" path="res://assets/Fonts/HorrorBrush-7Bv7l.ttf" id="8_dw7lk"]
 [ext_resource type="PackedScene" uid="uid://bhdh1nkgh7wvd" path="res://scenes/door_3_sm_004.tscn" id="8_vxglm"]
 [ext_resource type="PackedScene" uid="uid://dkh5usqdcmi65" path="res://scenes/door_3_sm_005.tscn" id="9_2f3dj"]
 [ext_resource type="PackedScene" uid="uid://bngh5wmx3g5dv" path="res://scenes/door_3_sm_006.tscn" id="10_yq6so"]
@@ -20,11 +23,11 @@
 [ext_resource type="PackedScene" uid="uid://dduskioa552fi" path="res://scenes/door_3_sm_011.tscn" id="16_j8jky"]
 [ext_resource type="PackedScene" uid="uid://c61tcw82phyo2" path="res://scenes/door_5_sm_001.tscn" id="17_kmb1v"]
 [ext_resource type="PackedScene" uid="uid://crf4fj1ja76ch" path="res://scenes/door_1_sm.tscn" id="18_fuf3a"]
-[ext_resource type="Script" uid="uid://do7ba220b7jlf" path="res://scripts/SCP_FinalDoor.gd" id="19_okk03"]
+[ext_resource type="Script" path="res://scripts/SCP_FinalDoor.gd" id="19_okk03"]
 [ext_resource type="PackedScene" uid="uid://dls2xa8ueyxf8" path="res://scenes/door_7_sm.tscn" id="19_pibwh"]
 [ext_resource type="PackedScene" uid="uid://c060wt20ghv83" path="res://scenes/door_1_sm_001.tscn" id="20_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://b6pib3bv8tk5m" path="res://scenes/door_2_sm.tscn" id="21_5he1u"]
-[ext_resource type="Script" uid="uid://biufiao4tshl2" path="res://scripts/SCPFinalDoor2.gd" id="21_bx44k"]
+[ext_resource type="Script" path="res://scripts/SCPFinalDoor2.gd" id="21_bx44k"]
 [ext_resource type="PackedScene" uid="uid://bsfh8ib7bvyn3" path="res://scenes/door.tscn" id="21_pm3ni"]
 [ext_resource type="AudioStream" uid="uid://c5qohfpad268j" path="res://assets/sounds/door_creak_open.wav" id="23_32suv"]
 [ext_resource type="PackedScene" uid="uid://b8llfttbrpjrr" path="res://scenes/8_room_PuzzleFinalDoor.tscn" id="23_61q37"]
@@ -50,6 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://c1hyfelr3h0vf" path="res://scenes/PaintingSequence2.tscn" id="48_5nsym"]
 [ext_resource type="PackedScene" uid="uid://osd6vpbkgask" path="res://assets/DeadHazmat/deadHazmatRoom.tscn" id="49_i3360"]
 [ext_resource type="PackedScene" uid="uid://x8ksgi6gj6n0" path="res://scenes/GDFinalZ6.glb" id="49_ty1g6"]
+[ext_resource type="PackedScene" uid="uid://b1i2qtjbugsh1" path="res://scenes/hiddenMessageNoSalvationHere.tscn" id="53_2cdjj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_02fca"]
 atlas = ExtResource("1_h2b84")
@@ -70,6 +74,14 @@ region = Rect2(179.29, 251.33, 246.84, 153.67)
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gvgi"]
 atlas = ExtResource("1_h2b84")
 region = Rect2(435.81, 252.54, 250.47, 153.67)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qbunj"]
+font = ExtResource("8_dw7lk")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_fkv2k"]
+font = ExtResource("8_dw7lk")
+font_size = 30
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ac04k"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -259,14 +271,14 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tel4y"]
 _data = {
-&"RESET": SubResource("Animation_tel4y"),
-&"door1_SM": SubResource("Animation_qkpxi"),
-&"door1_SM001": SubResource("Animation_5q0nq"),
 &"door2_SM": SubResource("Animation_fv21b"),
-&"door3_SM": SubResource("Animation_dgi5k"),
-&"door3_SM001": SubResource("Animation_j8jky"),
+&"door1_SM": SubResource("Animation_qkpxi"),
+&"door_open": SubResource("Animation_yq6so"),
 &"door6_SM": SubResource("Animation_pibwh"),
-&"door_open": SubResource("Animation_yq6so")
+&"door3_SM001": SubResource("Animation_j8jky"),
+&"door3_SM": SubResource("Animation_dgi5k"),
+&"door1_SM001": SubResource("Animation_5q0nq"),
+&"RESET": SubResource("Animation_tel4y")
 }
 
 [sub_resource type="Animation" id="Animation_fuf3a"]
@@ -302,8 +314,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pibwh"]
 _data = {
-&"RESET": SubResource("Animation_fuf3a"),
-&"door3_SM002": SubResource("Animation_kmb1v")
+&"door3_SM002": SubResource("Animation_kmb1v"),
+&"RESET": SubResource("Animation_fuf3a")
 }
 
 [sub_resource type="Animation" id="Animation_5he1u"]
@@ -339,8 +351,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5poiv"]
 _data = {
-&"RESET": SubResource("Animation_5he1u"),
-&"door3_SM003": SubResource("Animation_c6pm6")
+&"door3_SM003": SubResource("Animation_c6pm6"),
+&"RESET": SubResource("Animation_5he1u")
 }
 
 [sub_resource type="Animation" id="Animation_chjal"]
@@ -376,8 +388,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cjqg0"]
 _data = {
-&"RESET": SubResource("Animation_chjal"),
-&"door3_SM004": SubResource("Animation_2cjbq")
+&"door3_SM004": SubResource("Animation_2cjbq"),
+&"RESET": SubResource("Animation_chjal")
 }
 
 [sub_resource type="Animation" id="Animation_txyw0"]
@@ -413,8 +425,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vc5cj"]
 _data = {
-&"RESET": SubResource("Animation_txyw0"),
-&"door3_SM005": SubResource("Animation_vchkt")
+&"door3_SM005": SubResource("Animation_vchkt"),
+&"RESET": SubResource("Animation_txyw0")
 }
 
 [sub_resource type="Animation" id="Animation_ty1g6"]
@@ -450,8 +462,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j2jfr"]
 _data = {
-&"RESET": SubResource("Animation_ty1g6"),
-&"door3_SM006": SubResource("Animation_nvyfr")
+&"door3_SM006": SubResource("Animation_nvyfr"),
+&"RESET": SubResource("Animation_ty1g6")
 }
 
 [sub_resource type="Animation" id="Animation_bu4jf"]
@@ -487,8 +499,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o7ddy"]
 _data = {
-&"RESET": SubResource("Animation_bu4jf"),
-&"door3_SM007": SubResource("Animation_bjg73")
+&"door3_SM007": SubResource("Animation_bjg73"),
+&"RESET": SubResource("Animation_bu4jf")
 }
 
 [sub_resource type="Animation" id="Animation_ids8r"]
@@ -524,8 +536,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dnhof"]
 _data = {
-&"RESET": SubResource("Animation_ids8r"),
-&"door4_SM": SubResource("Animation_0loja")
+&"door4_SM": SubResource("Animation_0loja"),
+&"RESET": SubResource("Animation_ids8r")
 }
 
 [sub_resource type="Animation" id="Animation_cjqg0"]
@@ -585,8 +597,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vchkt"]
 _data = {
-&"RESET": SubResource("Animation_cjqg0"),
-&"door6_SM001": SubResource("Animation_5poiv")
+&"door6_SM001": SubResource("Animation_5poiv"),
+&"RESET": SubResource("Animation_cjqg0")
 }
 
 [sub_resource type="Animation" id="Animation_vc5cj"]
@@ -622,8 +634,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nvyfr"]
 _data = {
-&"RESET": SubResource("Animation_vc5cj"),
-&"door6_SM002": SubResource("Animation_2f3dj")
+&"door6_SM002": SubResource("Animation_2f3dj"),
+&"RESET": SubResource("Animation_vc5cj")
 }
 
 [sub_resource type="Animation" id="Animation_1v6qk"]
@@ -659,8 +671,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_augu2"]
 _data = {
-&"RESET": SubResource("Animation_1v6qk"),
-&"door3_SM011": SubResource("Animation_dnhof")
+&"door3_SM011": SubResource("Animation_dnhof"),
+&"RESET": SubResource("Animation_1v6qk")
 }
 
 [sub_resource type="Animation" id="Animation_kf5aa"]
@@ -696,8 +708,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t5ykj"]
 _data = {
-&"RESET": SubResource("Animation_kf5aa"),
-&"door7_SM": SubResource("Animation_tm6hj")
+&"door7_SM": SubResource("Animation_tm6hj"),
+&"RESET": SubResource("Animation_kf5aa")
 }
 
 [sub_resource type="BoxMesh" id="BoxMesh_yq6so"]
@@ -710,9 +722,10 @@ _data = {
 size = Vector3(274.216, 141.417, 157.117)
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_orqj0")
 
 [node name="Player" parent="." instance=ExtResource("1_nvyfr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5047, 8.67141, 20.8309)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.4783, 12.536, 24.3161)
 
 [node name="Flashlight" parent="Player/Camera3D" index="1"]
 spot_angle = 34.22
@@ -727,37 +740,6 @@ transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0.988579, 0)
 
 [node name="GameDesignBlob" parent="EnemyAI" index="4"]
 transform = Transform3D(-0.3, 0, -4.52987e-08, 0, 0.3, 0, 4.52987e-08, 0, -0.3, 0, -0.197272, 0)
-
-[node name="Skeleton3D" parent="EnemyAI/GameDesignBlob/Object_2/RootNode/Object_4" index="5"]
-bones/0/rotation = Quaternion(-3.85919e-08, 0.297381, 5.08945e-09, 0.954759)
-bones/1/position = Vector3(0.0630278, 3.53479, -0.089583)
-bones/1/rotation = Quaternion(-0.0375149, -0.368405, -0.011451, 0.928838)
-bones/2/rotation = Quaternion(0.0558229, 0.0408778, -0.00906116, 0.997562)
-bones/3/rotation = Quaternion(0.100557, 0.0796703, -0.0236719, 0.991454)
-bones/4/rotation = Quaternion(0.100557, 0.0796704, -0.0236719, 0.991454)
-bones/5/rotation = Quaternion(-0.0690254, -0.0110238, 0.00247142, 0.997551)
-bones/6/rotation = Quaternion(-0.0540229, 0.176671, -0.0128057, 0.982703)
-bones/7/position = Vector3(1.49012e-08, 0.135503, 0.0964481)
-bones/8/rotation = Quaternion(0.558443, 0.295358, -0.616225, 0.470289)
-bones/9/rotation = Quaternion(0.297762, -0.186961, 0.24953, 0.902285)
-bones/10/rotation = Quaternion(-0.051821, 0.0562481, 0.401982, 0.912448)
-bones/12/rotation = Quaternion(0.573716, -0.415424, 0.588511, 0.38978)
-bones/13/rotation = Quaternion(0.297163, 0.0110327, 0.18955, 0.935758)
-bones/14/rotation = Quaternion(0.0395317, -0.154163, -0.162167, 0.973844)
-bones/16/position = Vector3(0.894168, -0.335627, 0.0260327)
-bones/16/rotation = Quaternion(-0.0532109, -0.290238, 0.954693, 0.0386281)
-bones/17/rotation = Quaternion(-0.235163, 0.109771, -0.0195021, 0.965541)
-bones/18/rotation = Quaternion(0.601449, 0.423225, -0.461892, 0.495778)
-bones/19/rotation = Quaternion(0.00823021, 0.0236269, 0.160034, 0.986794)
-bones/20/position = Vector3(-5.96046e-08, 0.389069, 4.76837e-07)
-bones/20/rotation = Quaternion(-5.96046e-08, 2.98023e-08, -1.04308e-07, -1)
-bones/21/position = Vector3(-0.746121, -0.337569, -0.00420773)
-bones/21/rotation = Quaternion(0.0370143, 0.360537, 0.930665, 0.0500681)
-bones/22/rotation = Quaternion(-0.0533605, 0.330969, 0.0415186, 0.941216)
-bones/23/rotation = Quaternion(0.661508, -0.50194, 0.464339, 0.307981)
-bones/24/rotation = Quaternion(0.00220449, -0.0146505, -0.0896141, 0.995866)
-bones/25/position = Vector3(2.38419e-07, 0.32739, -1.19209e-06)
-bones/25/rotation = Quaternion(-2.98023e-08, -7.45058e-08, 4.47035e-08, 1)
 
 [node name="AnimationPlayer" parent="EnemyAI/GameDesignBlob" index="1"]
 speed_scale = 2.0
@@ -785,6 +767,7 @@ layout_mode = 2
 text = "Flashlight Battery: 100%"
 
 [node name="InventoryBar" type="HBoxContainer" parent="CanvasLayer"]
+visible = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -860,6 +843,41 @@ texture = ExtResource("2_mp4yc")
 [node name="PlaceHolder8" type="TextureRect" parent="CanvasLayer/InventoryBar"]
 layout_mode = 2
 texture = ExtResource("2_mp4yc")
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("7_lr58f")
+
+[node name="DialogueLabel1" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 7.0
+offset_right = 20.0
+offset_bottom = 30.0
+grow_horizontal = 2
+text = "test"
+label_settings = SubResource("LabelSettings_qbunj")
+
+[node name="ContinueLabel" type="Label" parent="CanvasLayer/Panel/DialogueLabel1"]
+layout_mode = 0
+offset_left = 4.5
+offset_top = 48.0
+offset_right = 84.5
+offset_bottom = 93.0
+text = "Testing"
+label_settings = SubResource("LabelSettings_fkv2k")
+
+[node name="TypingTimer" type="Timer" parent="CanvasLayer/Panel"]
+wait_time = 0.03
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_kk85q")
@@ -1211,7 +1229,7 @@ autoplay = true
 parameters/looping = true
 
 [node name="8 puzzle final door" parent="." node_paths=PackedStringArray("doorlight") instance=ExtResource("23_61q37")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4182, 10.5215, 18.874)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4504, 10.5215, 18.874)
 doorlight = NodePath("Doorlight8")
 levers = Array[NodePath]([NodePath("../LeftLevers/Lever"), NodePath("../LeftLevers/Lever2"), NodePath("../LeftLevers/Lever3"), NodePath("../LeftLevers/Lever4"), NodePath("../RightLevers/Lever5"), NodePath("../RightLevers/Lever6"), NodePath("../RightLevers/Lever7"), NodePath("../RightLevers/Lever8")])
 
@@ -1489,6 +1507,11 @@ bones/23/rotation = Quaternion(0.430605, 0.231538, -0.270636, 0.829292)
 bones/24/rotation = Quaternion(0.366592, 0.199393, -0.0751154, 0.905655)
 bones/25/position = Vector3(3.33786e-06, 2.61465, -2.83718e-05)
 bones/25/rotation = Quaternion(1.40071e-06, -1.49012e-07, -4.47035e-07, -1)
+
+[node name="HiddenMessageNoSalvationHere" parent="." instance=ExtResource("53_2cdjj")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -51.9922, 12.2507, 19.3157)
+
+[connection signal="timeout" from="CanvasLayer/Panel/TypingTimer" to="CanvasLayer/Panel" method="_on_typing_timer_timeout"]
 
 [editable path="Player"]
 [editable path="EnemyAI"]
