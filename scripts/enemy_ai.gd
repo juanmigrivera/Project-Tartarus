@@ -78,4 +78,3 @@ func on_area_3d_body_entered(body):
 	if body.is_in_group("Player"):
 		print("Game Over!")
 		get_tree().change_scene_to_file("res://scenes/Menus/lose_screen.tscn")
-		
