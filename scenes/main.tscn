@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://3pmq78q3eror" path="res://scenes/player.tscn" id="2_s6fyp"]
 [ext_resource type="PackedScene" uid="uid://bw71rrctam3n4" path="res://scenes/door_3_sm_001.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://bqicy61cpspqm" path="res://scenes/door_4_sm.tscn" id="3_jscy8"]
-[ext_resource type="PackedScene" path="res://scenes/hospital_8_room.tscn" id="3_y6deb"]
+[ext_resource type="PackedScene" uid="uid://cb780svr74exu" path="res://scenes/hospital_8_room.tscn" id="3_y6deb"]
 [ext_resource type="PackedScene" uid="uid://bfdf5pyg13by4" path="res://scenes/door_3_sm.tscn" id="4_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://civn1bgydoyqv" path="res://scenes/door_3_sm_002.tscn" id="5_y6deb"]
 [ext_resource type="PackedScene" uid="uid://cyj8ekt8qhdgl" path="res://scenes/door_3_sm_003.tscn" id="6_og1vs"]
@@ -26,17 +26,9 @@
 [ext_resource type="PackedScene" uid="uid://dls2xa8ueyxf8" path="res://scenes/door_7_sm.tscn" id="19_pibwh"]
 [ext_resource type="PackedScene" uid="uid://c060wt20ghv83" path="res://scenes/door_1_sm_001.tscn" id="20_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://b6pib3bv8tk5m" path="res://scenes/door_2_sm.tscn" id="21_5he1u"]
-<<<<<<< HEAD
 [ext_resource type="Script" path="res://scripts/SCPFinalDoor2.gd" id="21_bx44k"]
-=======
-<<<<<<< HEAD
-[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="21_pm3ni"]
-=======
-[ext_resource type="Script" uid="uid://biufiao4tshl2" path="res://scripts/SCPFinalDoor2.gd" id="21_bx44k"]
->>>>>>> 9748e4a012511b59619d98dfd6c9b674963f3e78
 
 [ext_resource type="PackedScene" uid="uid://bsfh8ib7bvyn3" path="res://scenes/door.tscn" id="21_pm3ni"]
->>>>>>> eadd9db809d516d89610f47a86988d6dc2c02e10
 [ext_resource type="AudioStream" uid="uid://c5qohfpad268j" path="res://assets/sounds/door_creak_open.wav" id="23_32suv"]
 [ext_resource type="PackedScene" uid="uid://b8llfttbrpjrr" path="res://scenes/8_room_PuzzleFinalDoor.tscn" id="23_61q37"]
 [ext_resource type="PackedScene" uid="uid://c38yn83wgd8fn" path="res://scenes/LeverModel.tscn" id="24_h78xu"]
