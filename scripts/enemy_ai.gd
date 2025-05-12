@@ -5,7 +5,7 @@ extends CharacterBody3D
 @export var speed: int = 1#4
 @export var chase_speed: int = 1.5#6
 @export var detection_range: int = 10#3
-@export var wander_time: int = 10#2
+@export var wander_time: int = 6#2
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 #@onready var player: Node3D = get_tree().get_first_node_in_group("Player")
