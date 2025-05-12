@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6ccat0hembx7"]
+
+[ext_resource type="Script" path="res://scripts/hidden_message.gd" id="1_yabmg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uo3om"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="TextMesh" id="TextMesh_0pkgj"]
+material = SubResource("StandardMaterial3D_uo3om")
+text = "0
+"
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("1_yabmg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.31694, 0, 0, 0, 3.31694, 0, 0, 0, 3.31694, 0.0487511, 0.356566, 0)
+layers = 2
+mesh = SubResource("TextMesh_0pkgj")
