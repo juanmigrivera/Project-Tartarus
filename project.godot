@@ -11,6 +11,15 @@ config_version=5
 [application]
 
 config/name="Project Tartarus"
+<<<<<<< HEAD
+run/main_scene="uid://bq4ywxaybmdxg"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/mode=2
+=======
 run/main_scene="uid://7js3fq665ruk"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
@@ -22,6 +31,7 @@ window/size/mode=3
 [global_group]
 
 Player=""
+>>>>>>> eadd9db809d516d89610f47a86988d6dc2c02e10
 
 [input]
 
