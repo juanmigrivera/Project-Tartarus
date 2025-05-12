@@ -1,5 +1,5 @@
 
-[gd_scene load_steps=107 format=3 uid="uid://bq4ywxaybmdxg"]
+[gd_scene load_steps=100 format=3 uid="uid://bq4ywxaybmdxg"]
 
 
 [ext_resource type="PackedScene" uid="uid://d3i76yu5iej28" path="res://scenes/enemy_ai.tscn" id="1_5poiv"]
@@ -23,11 +23,11 @@
 [ext_resource type="PackedScene" uid="uid://c61tcw82phyo2" path="res://scenes/door_5_sm_001.tscn" id="17_kmb1v"]
 [ext_resource type="PackedScene" uid="uid://crf4fj1ja76ch" path="res://scenes/door_1_sm.tscn" id="18_fuf3a"]
 
-[ext_resource type="Script" path="res://scripts/SCP_FinalDoor.gd" id="19_okk03"]
+[ext_resource type="Script" uid="uid://do7ba220b7jlf" path="res://scripts/SCP_FinalDoor.gd" id="19_okk03"]
 [ext_resource type="PackedScene" uid="uid://dls2xa8ueyxf8" path="res://scenes/door_7_sm.tscn" id="19_pibwh"]
 [ext_resource type="PackedScene" uid="uid://c060wt20ghv83" path="res://scenes/door_1_sm_001.tscn" id="20_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://b6pib3bv8tk5m" path="res://scenes/door_2_sm.tscn" id="21_5he1u"]
-[ext_resource type="Script" path="res://scripts/SCPFinalDoor2.gd" id="21_bx44k"]
+[ext_resource type="Script" uid="uid://biufiao4tshl2" path="res://scripts/SCPFinalDoor2.gd" id="21_bx44k"]
 
 [ext_resource type="PackedScene" uid="uid://bsfh8ib7bvyn3" path="res://scenes/door.tscn" id="21_pm3ni"]
 [ext_resource type="AudioStream" uid="uid://c5qohfpad268j" path="res://assets/sounds/door_creak_open.wav" id="23_32suv"]
@@ -850,7 +850,7 @@ environment = SubResource("Environment_kk85q")
 
 [node name="Player" parent="." instance=ExtResource("2_s6fyp")]
 
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4453, 8.29649, -3.39146)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.7462, 7.39692, -4.87182)
 
 
 [node name="Camera3D" type="Camera3D" parent="."]
