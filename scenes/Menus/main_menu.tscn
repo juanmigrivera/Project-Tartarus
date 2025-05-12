@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://7js3fq665ruk"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_8i5ae"]
+[ext_resource type="Texture2D" uid="uid://5scq0lu7awvo" path="res://assets/menu/istockphoto-508373930-612x612.jpg" id="2_rvjno"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8i5ae")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 646.0
+texture = ExtResource("2_rvjno")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -167.0
+offset_top = -280.0
+offset_right = 167.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="ControlsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
