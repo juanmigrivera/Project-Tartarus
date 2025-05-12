@@ -1511,6 +1511,11 @@ bones/25/rotation = Quaternion(1.40071e-06, -1.49012e-07, -4.47035e-07, -1)
 [node name="HiddenMessageNoSalvationHere" parent="." instance=ExtResource("53_2cdjj")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -51.9922, 12.2507, 19.3157)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0869, 9.49357, 7.90338)
+light_color = Color(0.564706, 0, 0.670588, 1)
+light_energy = 0.745
+
 [connection signal="timeout" from="CanvasLayer/Panel/TypingTimer" to="CanvasLayer/Panel" method="_on_typing_timer_timeout"]
 
 [editable path="Player"]

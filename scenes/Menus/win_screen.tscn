@@ -1,7 +1,151 @@
-[gd_scene load_steps=4 format=3 uid="uid://csnil21ajoncf"]
+[gd_scene load_steps=39 format=3 uid="uid://csnil21ajoncf"]
 
-[ext_resource type="Script" uid="uid://c52qgttggp7mq" path="res://win_screen.gd" id="1_2lqui"]
-[ext_resource type="Texture2D" uid="uid://djwga3ayxd8fk" path="res://assets/menu/hartwood-hospital-abandoned-psychiatric-asylum-600nw-1432467659.png" id="2_24em6"]
+[ext_resource type="Script" path="res://win_screen.gd" id="1_2lqui"]
+[ext_resource type="Texture2D" uid="uid://bw7j0dowlm6mt" path="res://assets/menu/WinScreen/frame_00_delay-0.1s.png" id="2_mb6bt"]
+[ext_resource type="Texture2D" uid="uid://c8pxoylnq3n0l" path="res://assets/menu/WinScreen/frame_01_delay-0.1s.png" id="3_x5ut1"]
+[ext_resource type="Texture2D" uid="uid://csd1lyvd45wyr" path="res://assets/menu/WinScreen/frame_02_delay-0.1s.png" id="4_cri8p"]
+[ext_resource type="Texture2D" uid="uid://dlb6mef6ke6el" path="res://assets/menu/WinScreen/frame_03_delay-0.1s.png" id="5_uli0l"]
+[ext_resource type="Texture2D" uid="uid://br5u4kgqcf3cn" path="res://assets/menu/WinScreen/frame_04_delay-0.1s.png" id="6_h32at"]
+[ext_resource type="Texture2D" uid="uid://b057mxvffmluw" path="res://assets/menu/WinScreen/frame_05_delay-0.1s.png" id="7_tmgqe"]
+[ext_resource type="Texture2D" uid="uid://dn66bffdy4mo6" path="res://assets/menu/WinScreen/frame_06_delay-0.1s.png" id="8_qae28"]
+[ext_resource type="Texture2D" uid="uid://d167axdot2gsk" path="res://assets/menu/WinScreen/frame_07_delay-0.1s.png" id="9_tknyp"]
+[ext_resource type="Texture2D" uid="uid://cd0jx48auj3qm" path="res://assets/menu/WinScreen/frame_08_delay-0.1s.png" id="10_5bexx"]
+[ext_resource type="Texture2D" uid="uid://ceyictnmtgrea" path="res://assets/menu/WinScreen/frame_09_delay-0.1s.png" id="11_fr052"]
+[ext_resource type="Texture2D" uid="uid://co8f2ibjpofb7" path="res://assets/menu/WinScreen/frame_10_delay-0.1s.png" id="12_j7ce2"]
+[ext_resource type="Texture2D" uid="uid://bxyxvt2o8fq5x" path="res://assets/menu/WinScreen/frame_11_delay-0.1s.png" id="13_rl11m"]
+[ext_resource type="Texture2D" uid="uid://brq2gmuv43oif" path="res://assets/menu/WinScreen/frame_12_delay-0.1s.png" id="14_fyiwq"]
+[ext_resource type="Texture2D" uid="uid://cwjvxbp1j26v4" path="res://assets/menu/WinScreen/frame_13_delay-0.1s.png" id="15_jdi52"]
+[ext_resource type="Texture2D" uid="uid://hx0nuklibwbx" path="res://assets/menu/WinScreen/frame_14_delay-0.1s.png" id="16_6ner5"]
+[ext_resource type="Texture2D" uid="uid://i2p6a76dshtf" path="res://assets/menu/WinScreen/frame_15_delay-0.1s.png" id="17_xhhep"]
+[ext_resource type="Texture2D" uid="uid://cmlfmcslme3tr" path="res://assets/menu/WinScreen/frame_16_delay-0.1s.png" id="18_7hfi5"]
+[ext_resource type="Texture2D" uid="uid://by38pca1h8hjv" path="res://assets/menu/WinScreen/frame_17_delay-0.1s.png" id="19_3e6nn"]
+[ext_resource type="Texture2D" uid="uid://u8mfvbep7ibu" path="res://assets/menu/WinScreen/frame_18_delay-0.1s.png" id="20_ul4kw"]
+[ext_resource type="Texture2D" uid="uid://3hd4o8rj04f6" path="res://assets/menu/WinScreen/frame_19_delay-0.1s.png" id="21_4mwyu"]
+[ext_resource type="Texture2D" uid="uid://wunk7136lax7" path="res://assets/menu/WinScreen/frame_20_delay-0.1s.png" id="22_aj0c6"]
+[ext_resource type="Texture2D" uid="uid://cf04yyqo5t2wy" path="res://assets/menu/WinScreen/frame_21_delay-0.1s.png" id="23_g8e7c"]
+[ext_resource type="Texture2D" uid="uid://dybmwyxs4qxu2" path="res://assets/menu/WinScreen/frame_22_delay-0.1s.png" id="24_bx7l2"]
+[ext_resource type="Texture2D" uid="uid://wjw31o87ds23" path="res://assets/menu/WinScreen/frame_23_delay-0.1s.png" id="25_gf22t"]
+[ext_resource type="Texture2D" uid="uid://csv6epx211gxw" path="res://assets/menu/WinScreen/frame_24_delay-0.1s.png" id="26_icl27"]
+[ext_resource type="Texture2D" uid="uid://cdls5xgmvn6f4" path="res://assets/menu/WinScreen/frame_25_delay-0.1s.png" id="27_l52ks"]
+[ext_resource type="Texture2D" uid="uid://cmd38nghhqaks" path="res://assets/menu/WinScreen/frame_26_delay-0.1s.png" id="28_35shh"]
+[ext_resource type="Texture2D" uid="uid://cabtaa5v8bwc1" path="res://assets/menu/WinScreen/frame_27_delay-0.1s.png" id="29_06da0"]
+[ext_resource type="Texture2D" uid="uid://bqgvq5ugns0cd" path="res://assets/menu/WinScreen/frame_28_delay-0.1s.png" id="30_ofo3o"]
+[ext_resource type="Texture2D" uid="uid://cv14tpsgtne7e" path="res://assets/menu/WinScreen/frame_29_delay-0.1s.png" id="31_v2emu"]
+[ext_resource type="Texture2D" uid="uid://cugkcpsc2jyoy" path="res://assets/menu/WinScreen/frame_30_delay-0.1s.png" id="32_epv5x"]
+[ext_resource type="Texture2D" uid="uid://blvhq7whw4yh2" path="res://assets/menu/WinScreen/frame_31_delay-0.1s.png" id="33_13nn4"]
+[ext_resource type="Texture2D" uid="uid://bcwk1cyhnjyan" path="res://assets/menu/WinScreen/frame_32_delay-0.1s.png" id="34_8dx14"]
+[ext_resource type="Texture2D" uid="uid://c0y6ra61es5y5" path="res://assets/menu/WinScreen/frame_33_delay-0.1s.png" id="35_in26v"]
+[ext_resource type="FontFile" uid="uid://c5jhp80a4joue" path="res://assets/Fonts/BloodScratch-LRJZ.ttf" id="36_k2ad4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8quuf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mb6bt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x5ut1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cri8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uli0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h32at")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tmgqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qae28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tknyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5bexx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fr052")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_j7ce2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rl11m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fyiwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jdi52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6ner5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_xhhep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7hfi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3e6nn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ul4kw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_4mwyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_aj0c6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_g8e7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_bx7l2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_gf22t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_icl27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_l52ks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_35shh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_06da0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ofo3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_v2emu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_epv5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_13nn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_8dx14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_in26v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xuiac"]
 font_size = 50
@@ -15,11 +159,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2lqui")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 1160.0
-offset_bottom = 646.0
-texture = ExtResource("2_24em6")
+[node name="TextureRect" type="AnimatedSprite2D" parent="."]
+position = Vector2(1010.5, 560.5)
+scale = Vector2(4.07028, 4.16544)
+sprite_frames = SubResource("SpriteFrames_8quuf")
+autoplay = "default"
+frame_progress = 0.32558
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -36,6 +181,8 @@ grow_vertical = 0
 
 [node name="ReturnButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("36_k2ad4")
+theme_override_font_sizes/font_size = 50
 text = "Return To Menu"
 
 [node name="Label" type="Label" parent="."]
@@ -51,6 +198,7 @@ offset_right = 158.0
 offset_bottom = 34.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("36_k2ad4")
 text = "You Escaped!"
 label_settings = SubResource("LabelSettings_xuiac")
 
