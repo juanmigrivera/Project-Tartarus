@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b6vny41y2b668" path="res://assets/SCP Cards/InventorySlot.png" id="2_mp4yc"]
 [ext_resource type="PackedScene" uid="uid://bw71rrctam3n4" path="res://scenes/door_3_sm_001.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://bqicy61cpspqm" path="res://scenes/door_4_sm.tscn" id="3_jscy8"]
+[ext_resource type="AudioStream" uid="uid://bplsuytx5fhcw" path="res://assets/sounds/free-zombie-moan-sounds-54824.mp3" id="3_nvyfr"]
 [ext_resource type="PackedScene" uid="uid://cb780svr74exu" path="res://scenes/hospital_8_room.tscn" id="3_y6deb"]
 [ext_resource type="PackedScene" uid="uid://bfdf5pyg13by4" path="res://scenes/door_3_sm.tscn" id="4_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://civn1bgydoyqv" path="res://scenes/door_3_sm_002.tscn" id="5_y6deb"]
@@ -48,6 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://b616j3vb4vh0x" path="res://scenes/PaintingSequence1.tscn" id="47_krwr1"]
 [ext_resource type="PackedScene" uid="uid://c1hyfelr3h0vf" path="res://scenes/PaintingSequence2.tscn" id="48_5nsym"]
 [ext_resource type="PackedScene" uid="uid://osd6vpbkgask" path="res://assets/DeadHazmat/deadHazmatRoom.tscn" id="49_i3360"]
+[ext_resource type="PackedScene" uid="uid://x8ksgi6gj6n0" path="res://scenes/GDFinalZ6.glb" id="49_ty1g6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_02fca"]
 atlas = ExtResource("1_h2b84")
@@ -79,8 +81,12 @@ ground_horizon_color = Color(0.132999, 0.13725, 0.143961, 1)
 sky_material = SubResource("ProceduralSkyMaterial_ac04k")
 
 [sub_resource type="Environment" id="Environment_kk85q"]
-background_mode = 2
+background_mode = 1
 sky = SubResource("Sky_88kfp")
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 5.0
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0, 0, 0, 1)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_2f3dj"]
 vertices = PackedVector3Array(40.8188, 0.75, -47.5027, 40.8188, 0.75, -39.5027, 45.5688, 0.75, -39.5027, 45.5688, 0.75, -47.5027, 39.0688, 0.75, -36.5027, 38.8188, 0.75, -39.0027, 32.5688, 0.75, -39.0027, 32.5688, 0.75, -31.7527, 38.8188, 0.75, -31.7527, 47.3188, 0.75, -34.0027, 47.5688, 0.75, -31.5027, 53.5688, 0.75, -31.5027, 53.5688, 0.75, -39.0027, 47.5688, 0.75, -39.0027, 45.8188, 0.75, -32.7527, 45.8188, 0.75, -33.5027, 44.8188, 0.75, -33.7527, 40.5688, 0.75, -32.7527, 44.8188, 0.75, -34.7527, 45.8188, 0.75, -35.0027, 45.8188, 0.75, -38.0027, 40.5688, 0.75, -38.0027, 40.8188, 6, -7.5027, 39.5688, 6, -7.5027, 39.3188, 6, -7.0027, 39.5688, 6, -4.2527, 43.0688, 6, -15.2527, 41.5688, 6, -15.7527, 40.5688, 6, -15.2527, 40.5688, 6, -9.5027, 42.3188, 6, -8.0027, 43.3188, 6, -11.0027, 43.0688, 6, -4.2527, 44.3188, 6, -3.7527, 44.3188, 6, -7.2527, 41.3188, 6, -8.7527, 29.3188, 6, -7.0027, 29.5688, 6, -3.5027, 39.3188, 6, -3.7527, -11.1812, 6.5, -4.5027, -10.6812, 6.5, -5.2527, -10.6812, 6.75, -6.5027, -13.4312, 6.5, -4.0027, -3.9312, 6.25, 0.747299, -3.1812, 6.5, 0.497299, -3.1812, 6.5, -0.502701, -3.9312, 6.25, -0.752701, -9.9312, 6.25, -2.5027, -10.6812, 6.25, -2.5027, -8.9312, 6.25, 3.7473, -9.6812, 6.75, -5.2527, -10.6812, 6.75, -7.0027, -6.6812, 6.5, -6.5027, -6.6812, 6.5, -7.0027, -9.6812, 6.75, -4.5027, -10.1812, 6.75, -4.0027, -3.9312, 6.25, -4.0027, -13.1812, 6.25, 3.9973, -13.1812, 6.5, 7.2473, -8.9312, 6.75, 7.2473, -10.6712, 6.25, 5.73329, -13.4312, 6.5, -3.0027, -14.4312, 6.5, -2.7527, -14.4312, 6.5, 3.7473, -3.9312, 6.5, 3.4973, -5.1812, 6.75, 3.5598, 26.0688, 6, -7.0027, 26.0688, 6.5, -1.7527, 29.5688, 6.5, -2.0027, 26.0688, 6, -3.0652, 19.5688, 6.5, -1.5027, 19.5688, 6.5, 2.2473, 25.0688, 6.5, 2.2473, 30.0688, 6.5, -1.7527, 25.3188, 6.5, 3.4973, 30.0688, 6.5, 3.4973, -7.1812, 11, -1.0027, -7.6812, 11, -0.752701, -7.9312, 11, 0.747299, -8.4312, 11, 1.4973, -9.1812, 11, 1.4973, -8.4312, 11.25, 3.4973, -3.9312, 11.25, -4.0027, -5.9312, 11.25, -6.0027, -6.4312, 11.25, -4.7527, -7.1812, 11.25, -4.5027, -3.9312, 11.25, 3.4973, -11.9312, 11.25, 7.4973, -11.6812, 11.25, 8.2473, -10.6812, 11.25, 7.2473, -11.9312, 11, -4.0027, -12.9312, 11, -4.5027, -13.4312, 11, -3.0027, -12.1812, 11, 2.2473, -8.9312, 11.25, 3.7473, -10.9312, 11, 2.4973, -14.4312, 11.25, 3.7473, -13.1812, 11.25, 3.9973, -14.4312, 11.25, -2.7527, -13.1812, 11.25, 7.2473, -8.9312, 11.25, 7.2473, -2.1812, 6.5, 0.997299, -2.1812, 6.5, -1.2527, -0.431198, 6.5, -4.0027, -0.681198, 6.5, -3.5027, -2.1812, 6.5, 3.4973, 6.3188, 6.5, 3.4973, 7.3188, 6.5, -3.7527, -2.1812, 6.5, -3.5027, 11.8188, 6.5, 6.2473, 12.0688, 6.5, 7.2473, 13.0688, 6.5, 7.2473, 13.0688, 6.5, 2.4973, 13.3188, 6.5, -2.7527, 13.3188, 6.5, -3.5027, 11.8188, 6.5, -3.5027, 14.0688, 6.5, -2.2527, 8.3188, 6.5, 7.2473, 10.8188, 6.5, 7.4973, 11.0688, 6.5, 6.2473, 8.3188, 6.5, 3.7473, 14.0688, 6.5, 1.9973, 17.8188, 6.5, 1.9973, 18.0688, 6.5, 0.747299, 17.8188, 6.5, -2.2527, 11.5688, 6.5, -4.0027, 10.3188, 10.5, -0.752701, 11.0688, 10.5, -0.752701, 11.0688, 10.5, -2.2527, 10.0688, 10.75, -2.2527, -7.6812, 7.5, 5.2473, -7.6812, 7.5, 8.7473, -4.4312, 7.5, 8.7473, -4.4312, 7.5, 5.2473, 22.0688, 6.5, 16.2473, 24.0688, 6.5, 15.9973, 24.0688, 6.25, 11.7473, 20.5688, 6.25, 11.7473, 15.8188, 6.5, 16.2473, 20.3188, 6.25, 8.9973, 9.5688, 6.25, 8.9973, 9.5688, 6.5, 16.2473, 21.5688, 6.25, 17.2473, 16.0688, 6.5, 17.2473, -14.4312, 10.75, 9.9973, -14.9312, 10.75, 10.2473, -14.6812, 11, 11.2473, -12.1812, 10.75, 11.2473, -11.1812, 10.75, 14.7473, -10.4312, 10.75, 14.4973, -10.1812, 10.75, 13.7473, -10.4312, 10.75, 9.2473, -12.4312, 10.75, 14.4973, -10.1812, 10.75, 17.4973, -10.1812, 10.75, 16.2473, -11.1812, 10.75, 15.9973, -12.1812, 10.75, 16.2473, -12.9312, 10.75, 17.4973, -14.4312, 10.75, 16.2473, -14.9312, 10.75, 18.2473, -13.6812, 10.75, 18.4973, -14.4312, 10.75, 9.2473, -11.9312, 10.75, 14.7473, 21.8188, 6.25, 10.2473, 24.3188, 6.25, 10.2473, 24.3188, 6.25, 9.2473, 21.5688, 6.25, 9.2473, -43.1812, 10.75, 13.2473, -43.1812, 10.75, 16.2473, -42.6812, 10.75, 16.4973, -39.1812, 10.75, 17.9973, -39.1812, 10.75, 13.2473, -42.9312, 10.75, 18.2473, -35.6812, 10.75, 13.2473, -35.6812, 10.75, 16.2473, -34.9312, 10.75, 16.4973, -35.1812, 10.75, 18.2473, -31.4312, 10.75, 17.9973, -31.4312, 10.75, 13.2473, -27.9312, 10.75, 13.2473, -27.6812, 10.75, 18.2473, -23.9312, 10.75, 17.9973, -23.9312, 10.75, 13.2473, -20.4312, 10.75, 13.2473, -20.4312, 10.75, 16.2473, -19.9312, 10.75, 16.4973, -16.1812, 10.75, 17.9973, -16.1812, 10.75, 13.2473, -20.1812, 10.75, 17.9973, -14.6812, 11, 13.9973, -14.6812, 11, 14.4973, -13.1812, 10.75, 14.4973, -13.1812, 10.75, 13.9973, 14.5688, 6.25, 25.2473, 14.8188, 6.25, 26.7473, 16.5688, 6.25, 27.2473, 19.3188, 6.25, 26.7473, 19.5688, 6.25, 24.9973, 9.5688, 6.5, 17.7473, 9.5688, 6.5, 25.2473, 15.8188, 6.5, 17.7473, 24.3188, 6.5, 24.9973, 24.3188, 6.5, 17.9973, 21.8188, 6.25, 17.7473, -15.6812, 15, 19.4973, -15.6812, 15, 20.4973, -14.9312, 15, 19.9973, -12.4312, 15, 20.2473, -12.4312, 15, 19.7473, -13.1812, 15, 19.4973, -48.6812, 10.75, 19.9973, -53.4312, 10.75, 19.9973, -50.9312, 10.75, 22.2473, -48.9312, 10.75, 22.2473, -48.4312, 10.75, 21.4973, -48.4312, 10.75, 20.7473, -53.4312, 10.75, 24.9973, -51.9312, 10.75, 25.2473, -51.6812, 10.75, 22.9973, -41.1812, 10.75, 21.9973, -37.4312, 10.75, 21.9973, -37.4312, 10.75, 19.9973, -47.4312, 10.75, 19.9973, -47.6812, 10.75, 21.4973, -47.1812, 10.75, 22.2473, -42.9312, 10.75, 22.4973, -47.6812, 10.75, 20.7473, -10.6812, 10.75, 22.2473, -10.4312, 10.75, 20.2473, -12.4312, 10.75, 19.7473, -16.6812, 10.75, 20.2473, -18.4312, 10.75, 21.9973, -34.6812, 10.75, 19.7473, -35.1812, 10.75, 22.4973, -33.6812, 10.75, 21.9973, -27.6812, 10.75, 19.7473, -25.9312, 10.75, 21.9973, -21.9312, 10.75, 21.9973, -19.1812, 10.75, 19.7473, -27.6812, 10.75, 22.4973, -29.4312, 10.75, 20.2473, -19.9312, 10.75, 22.4973, -16.1812, 15, 21.9973, -16.1812, 15, 22.9973, -15.1812, 15, 22.7473, -15.1812, 15, 22.2473, -46.1812, 10.75, 28.9973, -41.9312, 10.75, 28.9973, -42.4312, 10.75, 23.9973, -46.1812, 10.75, 24.2473, -34.4312, 10.75, 28.9973, -34.4312, 10.75, 25.9973, -34.9312, 10.75, 25.7473, -38.6812, 10.75, 24.2473, -38.6812, 10.75, 28.9973, -34.6812, 10.75, 23.9973, -30.9312, 10.75, 24.2473, -30.9312, 10.75, 28.9973, -26.6812, 10.75, 28.9973, -26.6812, 10.75, 24.2473, -19.1812, 10.75, 28.9973, -19.1812, 10.75, 25.9973, -19.6812, 10.75, 25.7473, -23.1812, 10.75, 24.2473, -23.1812, 10.75, 28.9973, -19.4312, 10.75, 23.9973, -53.1812, 10.75, 26.9973, -53.1812, 10.75, 32.9973, -51.6812, 10.75, 32.7473, -51.6812, 10.75, 26.7473, 14.8188, 6.5, 35.4973, 13.3188, 6.5, 36.7473, 14.0688, 6.25, 37.2473, 13.8188, 6.5, 38.2473, 18.5688, 6.25, 35.9973, 18.5688, 6.5, 28.4973, 16.3188, 6.25, 28.2473, 14.8188, 6.5, 28.9973, 18.8188, 6.25, 41.9973, 22.0688, 6.5, 41.7473, 22.0688, 6.5, 36.2473, 12.0688, 6.5, 35.2473, 13.0688, 6.5, 34.2473, 13.0688, 6.5, 31.4973, 2.5688, 6.5, 31.4973, 5.0688, 6.25, 35.2473, 2.5688, 6.25, 39.4973, 4.8188, 6.25, 39.4973, 12.5688, 6.75, 37.7473, 12.3188, 6.5, 38.2473, 6.3188, 6.5, 40.9973, 7.0688, 6.5, 41.4973, 9.5688, 6.5, 41.4973, 6.8188, 6.25, 37.4973, 6.3188, 6.25, 37.4973, 7.0688, 6.5, 36.7473, 11.5688, 6.5, 38.2473, 12.0688, 6.5, 36.7473, 9.8188, 6.5, 43.2473, 9.3188, 6.5, 43.9973, 12.3188, 6.5, 46.9973, 16.0688, 6.5, 46.9973, 18.8188, 6.5, 44.2473, 7.0688, 6.5, 42.7473, 8.0688, 6.5, 44.2473, 7.8188, 6.5, 42.7473)
@@ -706,10 +712,62 @@ size = Vector3(274.216, 141.417, 157.117)
 [node name="Node3D" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_nvyfr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.01194, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5047, 8.67141, 20.8309)
+
+[node name="Flashlight" parent="Player/Camera3D" index="1"]
+spot_angle = 34.22
+
+[node name="Node3D" type="Node3D" parent="Player"]
 
 [node name="EnemyAI" parent="." instance=ExtResource("1_5poiv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3069, 7.36041, 14.5189)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3069, 7.54613, 14.5189)
+
+[node name="CollisionShape3D" parent="EnemyAI" index="1"]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0.988579, 0)
+
+[node name="GameDesignBlob" parent="EnemyAI" index="4"]
+transform = Transform3D(-0.3, 0, -4.52987e-08, 0, 0.3, 0, 4.52987e-08, 0, -0.3, 0, -0.197272, 0)
+
+[node name="Skeleton3D" parent="EnemyAI/GameDesignBlob/Object_2/RootNode/Object_4" index="5"]
+bones/0/rotation = Quaternion(-3.85919e-08, 0.297381, 5.08945e-09, 0.954759)
+bones/1/position = Vector3(0.0630278, 3.53479, -0.089583)
+bones/1/rotation = Quaternion(-0.0375149, -0.368405, -0.011451, 0.928838)
+bones/2/rotation = Quaternion(0.0558229, 0.0408778, -0.00906116, 0.997562)
+bones/3/rotation = Quaternion(0.100557, 0.0796703, -0.0236719, 0.991454)
+bones/4/rotation = Quaternion(0.100557, 0.0796704, -0.0236719, 0.991454)
+bones/5/rotation = Quaternion(-0.0690254, -0.0110238, 0.00247142, 0.997551)
+bones/6/rotation = Quaternion(-0.0540229, 0.176671, -0.0128057, 0.982703)
+bones/7/position = Vector3(1.49012e-08, 0.135503, 0.0964481)
+bones/8/rotation = Quaternion(0.558443, 0.295358, -0.616225, 0.470289)
+bones/9/rotation = Quaternion(0.297762, -0.186961, 0.24953, 0.902285)
+bones/10/rotation = Quaternion(-0.051821, 0.0562481, 0.401982, 0.912448)
+bones/12/rotation = Quaternion(0.573716, -0.415424, 0.588511, 0.38978)
+bones/13/rotation = Quaternion(0.297163, 0.0110327, 0.18955, 0.935758)
+bones/14/rotation = Quaternion(0.0395317, -0.154163, -0.162167, 0.973844)
+bones/16/position = Vector3(0.894168, -0.335627, 0.0260327)
+bones/16/rotation = Quaternion(-0.0532109, -0.290238, 0.954693, 0.0386281)
+bones/17/rotation = Quaternion(-0.235163, 0.109771, -0.0195021, 0.965541)
+bones/18/rotation = Quaternion(0.601449, 0.423225, -0.461892, 0.495778)
+bones/19/rotation = Quaternion(0.00823021, 0.0236269, 0.160034, 0.986794)
+bones/20/position = Vector3(-5.96046e-08, 0.389069, 4.76837e-07)
+bones/20/rotation = Quaternion(-5.96046e-08, 2.98023e-08, -1.04308e-07, -1)
+bones/21/position = Vector3(-0.746121, -0.337569, -0.00420773)
+bones/21/rotation = Quaternion(0.0370143, 0.360537, 0.930665, 0.0500681)
+bones/22/rotation = Quaternion(-0.0533605, 0.330969, 0.0415186, 0.941216)
+bones/23/rotation = Quaternion(0.661508, -0.50194, 0.464339, 0.307981)
+bones/24/rotation = Quaternion(0.00220449, -0.0146505, -0.0896141, 0.995866)
+bones/25/position = Vector3(2.38419e-07, 0.32739, -1.19209e-06)
+bones/25/rotation = Quaternion(-2.98023e-08, -7.45058e-08, 4.47035e-08, 1)
+
+[node name="AnimationPlayer" parent="EnemyAI/GameDesignBlob" index="1"]
+speed_scale = 2.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="EnemyAI"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37068, 0)
+stream = ExtResource("3_nvyfr")
+volume_db = -5.0
+autoplay = true
+max_distance = 30.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 0
@@ -1055,6 +1113,11 @@ libraries = {
 &"": SubResource("AnimationLibrary_augu2")
 }
 
+[node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D/Hospital8Room/Door3_11/door3_SM011"]
+transform = Transform3D(100, -2.91038e-11, 5.20417e-18, 2.91038e-11, 100, 2.27379e-12, -6.93889e-18, -2.27368e-12, 100, 54.0293, -45.7411, 276.76)
+light_color = Color(0, 0.626662, 0.237707, 1)
+omni_range = 1.615
+
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door3_11"]
 stream = ExtResource("23_32suv")
 volume_db = -3.0
@@ -1143,13 +1206,18 @@ max_db = 1.0
 
 [node name="Background music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("25_oa7hl")
-volume_db = -3.065
+volume_db = -14.591
 autoplay = true
 parameters/looping = true
 
-[node name="8 puzzle final door" parent="." instance=ExtResource("23_61q37")]
+[node name="8 puzzle final door" parent="." node_paths=PackedStringArray("doorlight") instance=ExtResource("23_61q37")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4182, 10.5215, 18.874)
+doorlight = NodePath("Doorlight8")
 levers = Array[NodePath]([NodePath("../LeftLevers/Lever"), NodePath("../LeftLevers/Lever2"), NodePath("../LeftLevers/Lever3"), NodePath("../LeftLevers/Lever4"), NodePath("../RightLevers/Lever5"), NodePath("../RightLevers/Lever6"), NodePath("../RightLevers/Lever7"), NodePath("../RightLevers/Lever8")])
+
+[node name="Doorlight8" type="OmniLight3D" parent="8 puzzle final door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.570343, 2.5923, 0.56148)
+light_color = Color(1, 0.145098, 0, 1)
 
 [node name="target2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.347, 11.2, 21.1)
@@ -1176,7 +1244,33 @@ script = ExtResource("26_vxglm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419307, 0)
 shape = SubResource("CapsuleShape3D_tel4y")
 
-[node name="Sketchfab_Scene" parent="sldfaksjd" instance=ExtResource("27_2f3dj")]
+[node name="GDFinalZ5" parent="Enemy3" index="1"]
+transform = Transform3D(-0.025, 0, -2.18557e-09, 0, 0.025, 0, 2.18557e-09, 0, -0.025, 0, -0.985889, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Enemy3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37068, 0)
+stream = ExtResource("3_nvyfr")
+volume_db = -5.0
+autoplay = true
+max_distance = 30.0
+
+[node name="Enemy2" parent="." node_paths=PackedStringArray("target_a", "target_b") instance=ExtResource("31_vc5cj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.056, 11.2, 20.345)
+target_a = NodePath("../target")
+target_b = NodePath("../target2")
+
+[node name="CollisionShape3D" parent="Enemy2" index="0"]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0.122734, -0.119524)
+
+[node name="GDFinalZ5" parent="Enemy2" index="1"]
+transform = Transform3D(-0.025, 0, -2.18557e-09, 0, 0.025, 0, 2.18557e-09, 0, -0.025, 0, -0.985889, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Enemy2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37068, 0)
+stream = ExtResource("3_nvyfr")
+volume_db = -5.0
+autoplay = true
+max_distance = 30.0
 
 [node name="Bed" parent="." instance=ExtResource("30_fv21b")]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -52.012, 10.2281, 21.3687)
@@ -1192,19 +1286,19 @@ shape = SubResource("BoxShape3D_fv21b")
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 10, 15, -10)
 
 [node name="Level 1 SCP Card" parent="." instance=ExtResource("31_l5hve")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 14.9829, 7.333, -2.04828)
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 21.238, 7.33, 38.499)
 
 [node name="Level 2 SCP Card" parent="." instance=ExtResource("34_kpnjq")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 11.5762, 7.333, -2.048)
+transform = Transform3D(-4.37114e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.37114e-10, 11.5762, 7.333, 33.5495)
 
 [node name="Level 3 SCP Card" parent="." instance=ExtResource("35_5an74")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 8.18934, 7.3, -2)
+transform = Transform3D(0.00605058, 0, 0.00796182, 0, 0.01, 0, -0.00796182, 0, 0.00605058, 3.01763, 7.33, 32.4735)
 
 [node name="Level 4 SCP Card" parent="." instance=ExtResource("36_eo1lw")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 5.6223, 7.2, -2)
+transform = Transform3D(-0.00674753, 0, 0.00738043, 0, 0.01, 0, -0.00738043, 0, -0.00674753, 9.95542, 7.33, 24.2095)
 
 [node name="Level 5 SCP Card" parent="." instance=ExtResource("37_k43sp")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 1.48927, 7.5, -2)
+transform = Transform3D(-0.000814688, 0, -0.00996676, 0, 0.01, 0, 0.00996676, 0, -0.000814688, 6.406, 7.33, -0.953)
 
 [node name="CardReader" parent="." instance=ExtResource("39_lec1n")]
 transform = Transform3D(-1.31134e-08, -0.3, 1.31134e-08, 0, -1.31134e-08, -0.3, 0.3, -1.31134e-08, 5.73206e-16, 18.3567, 7.33256, -1.78819)
@@ -1235,6 +1329,175 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76428, 0.576881, -2.17563)
 [node name="DeadHazmat" parent="Environmental Assets" instance=ExtResource("49_i3360")]
 transform = Transform3D(0.026334, 0, -0.999653, 0, 1, 0, 0.999653, 0, 0.026334, 20.0794, 6.0275, 37.8675)
 
+[node name="GDFinalZ9" parent="." instance=ExtResource("49_ty1g6")]
+transform = Transform3D(0.00551889, -0.0116669, 0.0214109, 0.00136771, -0.0217698, -0.012215, 0.0243448, 0.00386788, -0.00416753, 10.1543, 6.13942, 25.1798)
+
+[node name="Skeleton3D" parent="GDFinalZ9/Object_2/RootNode/Object_4" index="2"]
+bones/0/rotation = Quaternion(0.0447344, -0.204785, 0.601043, 0.771238)
+bones/1/position = Vector3(-4.49532, 31.9795, 1.18011)
+bones/1/rotation = Quaternion(-0.0245066, -0.00604121, 0.0928184, 0.995363)
+bones/2/position = Vector3(0.00234781, 5.34442, -0.108436)
+bones/2/rotation = Quaternion(0.221069, -0.0776116, -0.158023, 0.959236)
+bones/3/rotation = Quaternion(0.193603, 0.0831538, -0.0220522, 0.977301)
+bones/4/rotation = Quaternion(-0.0346269, 0.0741028, -0.026302, 0.996302)
+bones/5/position = Vector3(0.0185875, 7.67781, 0.64095)
+bones/5/rotation = Quaternion(0.135214, -0.00561808, -0.0170064, 0.990655)
+bones/8/rotation = Quaternion(-0.768996, 0.0125307, 0.537918, -0.345156)
+bones/9/rotation = Quaternion(0.126425, -0.319789, 0.212496, 0.914657)
+bones/10/rotation = Quaternion(0.0238995, 0.218354, 0.0604663, 0.973701)
+bones/11/rotation = Quaternion(-0.0445596, -0.219322, -0.0639357, 0.972535)
+bones/12/position = Vector3(-3.79681, 5.74139, 0.251863)
+bones/12/rotation = Quaternion(0.174394, 0.63066, 0.627586, 0.42189)
+bones/13/rotation = Quaternion(0.314383, 0.157334, -0.152841, 0.923607)
+bones/14/rotation = Quaternion(0.102492, -0.0622802, 0.127217, 0.984598)
+bones/16/position = Vector3(4.11049, 0.526628, 0.204215)
+bones/16/rotation = Quaternion(0.256467, -0.203696, 0.941062, 0.0844662)
+bones/17/rotation = Quaternion(-0.066675, 0.310053, -0.0242656, 0.948068)
+bones/18/rotation = Quaternion(0.411911, -0.102168, 0.133975, 0.895512)
+bones/19/rotation = Quaternion(0.374671, -0.177301, 0.046333, 0.908867)
+bones/20/position = Vector3(7.15256e-06, 2.66527, 5.45382e-06)
+bones/20/rotation = Quaternion(-3.57628e-07, 1.49012e-08, 2.5332e-07, 1)
+bones/21/position = Vector3(-4.09653, 0.114276, 0.281838)
+bones/21/rotation = Quaternion(0.503332, 0.405119, 0.760378, -0.0660277)
+bones/22/position = Vector3(-0.112548, 15.5187, -0.137822)
+bones/22/rotation = Quaternion(-0.390575, 0.0903441, 0.163148, 0.901483)
+bones/23/position = Vector3(-0.0390303, 15.3622, -0.0936433)
+bones/23/rotation = Quaternion(0.430605, 0.231538, -0.270636, 0.829292)
+bones/24/rotation = Quaternion(0.366592, 0.199393, -0.0751154, 0.905655)
+bones/25/position = Vector3(3.33786e-06, 2.61465, -2.83718e-05)
+bones/25/rotation = Quaternion(1.40071e-06, -1.49012e-07, -4.47035e-07, -1)
+
+[node name="AnimationPlayer" parent="GDFinalZ9" index="1"]
+root_node = NodePath("../../GDFinalZ9")
+
+[node name="GDFinalZ8" parent="." instance=ExtResource("49_ty1g6")]
+transform = Transform3D(0.0131737, -0.0188517, -0.00980132, -0.00455608, 0.00875778, -0.0229683, 0.0207532, 0.0138894, 0.00117931, 3.61886, 5.74306, 32.716)
+
+[node name="Skeleton3D" parent="GDFinalZ8/Object_2/RootNode/Object_4" index="2"]
+bones/0/rotation = Quaternion(0.0447344, -0.204785, 0.601043, 0.771238)
+bones/1/position = Vector3(-4.49532, 31.9795, 1.18011)
+bones/1/rotation = Quaternion(-0.0245066, -0.00604121, 0.0928184, 0.995363)
+bones/2/position = Vector3(0.00234781, 5.34442, -0.108436)
+bones/2/rotation = Quaternion(0.221069, -0.0776116, -0.158023, 0.959236)
+bones/3/rotation = Quaternion(0.193603, 0.0831538, -0.0220522, 0.977301)
+bones/4/rotation = Quaternion(-0.0346269, 0.0741028, -0.026302, 0.996302)
+bones/5/position = Vector3(0.0185875, 7.67781, 0.64095)
+bones/5/rotation = Quaternion(0.135214, -0.00561808, -0.0170064, 0.990655)
+bones/8/rotation = Quaternion(-0.768996, 0.0125307, 0.537918, -0.345156)
+bones/9/rotation = Quaternion(0.126425, -0.319789, 0.212496, 0.914657)
+bones/10/rotation = Quaternion(0.0238995, 0.218354, 0.0604663, 0.973701)
+bones/11/rotation = Quaternion(-0.0445596, -0.219322, -0.0639357, 0.972535)
+bones/12/position = Vector3(-3.79681, 5.74139, 0.251863)
+bones/12/rotation = Quaternion(0.174394, 0.63066, 0.627586, 0.42189)
+bones/13/rotation = Quaternion(0.314383, 0.157334, -0.152841, 0.923607)
+bones/14/rotation = Quaternion(0.102492, -0.0622802, 0.127217, 0.984598)
+bones/16/position = Vector3(4.11049, 0.526628, 0.204215)
+bones/16/rotation = Quaternion(0.256467, -0.203696, 0.941062, 0.0844662)
+bones/17/rotation = Quaternion(-0.066675, 0.310053, -0.0242656, 0.948068)
+bones/18/rotation = Quaternion(0.411911, -0.102168, 0.133975, 0.895512)
+bones/19/rotation = Quaternion(0.374671, -0.177301, 0.046333, 0.908867)
+bones/20/position = Vector3(7.15256e-06, 2.66527, 5.45382e-06)
+bones/20/rotation = Quaternion(-3.57628e-07, 1.49012e-08, 2.5332e-07, 1)
+bones/21/position = Vector3(-4.09653, 0.114276, 0.281838)
+bones/21/rotation = Quaternion(0.503332, 0.405119, 0.760378, -0.0660277)
+bones/22/position = Vector3(-0.112548, 15.5187, -0.137822)
+bones/22/rotation = Quaternion(-0.390575, 0.0903441, 0.163148, 0.901483)
+bones/23/position = Vector3(-0.0390303, 15.3622, -0.0936433)
+bones/23/rotation = Quaternion(0.430605, 0.231538, -0.270636, 0.829292)
+bones/24/rotation = Quaternion(0.366592, 0.199393, -0.0751154, 0.905655)
+bones/25/position = Vector3(3.33786e-06, 2.61465, -2.83718e-05)
+bones/25/rotation = Quaternion(1.40071e-06, -1.49012e-07, -4.47035e-07, -1)
+
+[node name="AnimationPlayer" parent="GDFinalZ8" index="1"]
+root_node = NodePath("../../GDFinalZ8")
+
+[node name="GDFinalZ7" parent="." instance=ExtResource("49_ty1g6")]
+transform = Transform3D(0.0114276, -0.000134507, 0.0222349, 0.00122825, 0.0249652, -0.000480237, -0.0222014, 0.00131192, 0.0114183, 12.5206, 5.9933, 32.527)
+
+[node name="Skeleton3D" parent="GDFinalZ7/Object_2/RootNode/Object_4" index="2"]
+bones/0/rotation = Quaternion(0.0447344, -0.204785, 0.601043, 0.771238)
+bones/1/position = Vector3(-4.49532, 31.9795, 1.18011)
+bones/1/rotation = Quaternion(-0.0245066, -0.00604121, 0.0928184, 0.995363)
+bones/2/position = Vector3(0.00234781, 5.34442, -0.108436)
+bones/2/rotation = Quaternion(0.221069, -0.0776116, -0.158023, 0.959236)
+bones/3/rotation = Quaternion(0.193603, 0.0831538, -0.0220522, 0.977301)
+bones/4/rotation = Quaternion(-0.0346269, 0.0741028, -0.026302, 0.996302)
+bones/5/position = Vector3(0.0185875, 7.67781, 0.64095)
+bones/5/rotation = Quaternion(0.135214, -0.00561808, -0.0170064, 0.990655)
+bones/8/rotation = Quaternion(-0.768996, 0.0125307, 0.537918, -0.345156)
+bones/9/rotation = Quaternion(0.126425, -0.319789, 0.212496, 0.914657)
+bones/10/rotation = Quaternion(0.0238995, 0.218354, 0.0604663, 0.973701)
+bones/11/rotation = Quaternion(-0.0445596, -0.219322, -0.0639357, 0.972535)
+bones/12/position = Vector3(-3.79681, 5.74139, 0.251863)
+bones/12/rotation = Quaternion(0.174394, 0.63066, 0.627586, 0.42189)
+bones/13/rotation = Quaternion(0.314383, 0.157334, -0.152841, 0.923607)
+bones/14/rotation = Quaternion(0.102492, -0.0622802, 0.127217, 0.984598)
+bones/16/position = Vector3(4.11049, 0.526628, 0.204215)
+bones/16/rotation = Quaternion(0.256467, -0.203696, 0.941062, 0.0844662)
+bones/17/rotation = Quaternion(-0.066675, 0.310053, -0.0242656, 0.948068)
+bones/18/rotation = Quaternion(0.411911, -0.102168, 0.133975, 0.895512)
+bones/19/rotation = Quaternion(0.374671, -0.177301, 0.046333, 0.908867)
+bones/20/position = Vector3(7.15256e-06, 2.66527, 5.45382e-06)
+bones/20/rotation = Quaternion(-3.57628e-07, 1.49012e-08, 2.5332e-07, 1)
+bones/21/position = Vector3(-4.09653, 0.114276, 0.281838)
+bones/21/rotation = Quaternion(0.503332, 0.405119, 0.760378, -0.0660277)
+bones/22/position = Vector3(-0.112548, 15.5187, -0.137822)
+bones/22/rotation = Quaternion(-0.390575, 0.0903441, 0.163148, 0.901483)
+bones/23/position = Vector3(-0.0390303, 15.3622, -0.0936433)
+bones/23/rotation = Quaternion(0.430605, 0.231538, -0.270636, 0.829292)
+bones/24/rotation = Quaternion(0.366592, 0.199393, -0.0751154, 0.905655)
+bones/25/position = Vector3(3.33786e-06, 2.61465, -2.83718e-05)
+bones/25/rotation = Quaternion(1.40071e-06, -1.49012e-07, -4.47035e-07, -1)
+
+[node name="AnimationPlayer" parent="GDFinalZ7" index="1"]
+root_node = NodePath("../../GDFinalZ7")
+
+[node name="GDFinalZ6" parent="." instance=ExtResource("49_ty1g6")]
+transform = Transform3D(0.00116764, 0, -0.0249727, 0, 0.025, 0, 0.0249727, 0, 0.00116764, 5.91253, 6.02091, 0.0260201)
+
+[node name="Skeleton3D" parent="GDFinalZ6/Object_2/RootNode/Object_4" index="2"]
+bones/0/rotation = Quaternion(0.0447344, -0.204785, 0.601043, 0.771238)
+bones/1/position = Vector3(-4.49532, 31.9795, 1.18011)
+bones/1/rotation = Quaternion(-0.0245066, -0.00604121, 0.0928184, 0.995363)
+bones/2/position = Vector3(0.00234781, 5.34442, -0.108436)
+bones/2/rotation = Quaternion(0.221069, -0.0776116, -0.158023, 0.959236)
+bones/3/rotation = Quaternion(0.193603, 0.0831538, -0.0220522, 0.977301)
+bones/4/rotation = Quaternion(-0.0346269, 0.0741028, -0.026302, 0.996302)
+bones/5/position = Vector3(0.0185875, 7.67781, 0.64095)
+bones/5/rotation = Quaternion(0.135214, -0.00561808, -0.0170064, 0.990655)
+bones/8/rotation = Quaternion(-0.768996, 0.0125307, 0.537918, -0.345156)
+bones/9/rotation = Quaternion(0.126425, -0.319789, 0.212496, 0.914657)
+bones/10/rotation = Quaternion(0.0238995, 0.218354, 0.0604663, 0.973701)
+bones/11/rotation = Quaternion(-0.0445596, -0.219322, -0.0639357, 0.972535)
+bones/12/position = Vector3(-3.79681, 5.74139, 0.251863)
+bones/12/rotation = Quaternion(0.174394, 0.63066, 0.627586, 0.42189)
+bones/13/rotation = Quaternion(0.314383, 0.157334, -0.152841, 0.923607)
+bones/14/rotation = Quaternion(0.102492, -0.0622802, 0.127217, 0.984598)
+bones/16/position = Vector3(4.11049, 0.526628, 0.204215)
+bones/16/rotation = Quaternion(0.256467, -0.203696, 0.941062, 0.0844662)
+bones/17/rotation = Quaternion(-0.066675, 0.310053, -0.0242656, 0.948068)
+bones/18/rotation = Quaternion(0.411911, -0.102168, 0.133975, 0.895512)
+bones/19/rotation = Quaternion(0.374671, -0.177301, 0.046333, 0.908867)
+bones/20/position = Vector3(7.15256e-06, 2.66527, 5.45382e-06)
+bones/20/rotation = Quaternion(-3.57628e-07, 1.49012e-08, 2.5332e-07, 1)
+bones/21/position = Vector3(-4.09653, 0.114276, 0.281838)
+bones/21/rotation = Quaternion(0.503332, 0.405119, 0.760378, -0.0660277)
+bones/22/position = Vector3(-0.112548, 15.5187, -0.137822)
+bones/22/rotation = Quaternion(-0.390575, 0.0903441, 0.163148, 0.901483)
+bones/23/position = Vector3(-0.0390303, 15.3622, -0.0936433)
+bones/23/rotation = Quaternion(0.430605, 0.231538, -0.270636, 0.829292)
+bones/24/rotation = Quaternion(0.366592, 0.199393, -0.0751154, 0.905655)
+bones/25/position = Vector3(3.33786e-06, 2.61465, -2.83718e-05)
+bones/25/rotation = Quaternion(1.40071e-06, -1.49012e-07, -4.47035e-07, -1)
+
 [editable path="Player"]
 [editable path="EnemyAI"]
 [editable path="EnemyAI/GameDesignBlob"]
+[editable path="Enemy3"]
+[editable path="Enemy3/GDFinalZ5"]
+[editable path="Enemy2"]
+[editable path="Enemy2/GDFinalZ5"]
+[editable path="GDFinalZ9"]
+[editable path="GDFinalZ8"]
+[editable path="GDFinalZ7"]
+[editable path="GDFinalZ6"]

@@ -64,7 +64,7 @@ func _move_towards_agent(current_speed: float, delta):
 
 func _check_player_distance():
 	var distance = global_position.distance_to(player.global_position)
-	print(distance)
+	#print(distance)
 	if distance < detection_range:
 		state = State.CHASE
 	else:
