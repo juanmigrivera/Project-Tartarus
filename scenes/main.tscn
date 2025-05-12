@@ -1,4 +1,6 @@
+
 [gd_scene load_steps=100 format=3 uid="uid://bq4ywxaybmdxg"]
+
 
 [ext_resource type="PackedScene" uid="uid://d3i76yu5iej28" path="res://scenes/enemy_ai.tscn" id="1_5poiv"]
 [ext_resource type="Texture2D" uid="uid://b0amlji66pop" path="res://assets/SCP Cards/SCP Card Logo.png" id="1_h2b84"]
@@ -20,27 +22,38 @@
 [ext_resource type="PackedScene" uid="uid://dduskioa552fi" path="res://scenes/door_3_sm_011.tscn" id="16_j8jky"]
 [ext_resource type="PackedScene" uid="uid://c61tcw82phyo2" path="res://scenes/door_5_sm_001.tscn" id="17_kmb1v"]
 [ext_resource type="PackedScene" uid="uid://crf4fj1ja76ch" path="res://scenes/door_1_sm.tscn" id="18_fuf3a"]
+
 [ext_resource type="Script" uid="uid://do7ba220b7jlf" path="res://scripts/SCP_FinalDoor.gd" id="19_okk03"]
 [ext_resource type="PackedScene" uid="uid://dls2xa8ueyxf8" path="res://scenes/door_7_sm.tscn" id="19_pibwh"]
 [ext_resource type="PackedScene" uid="uid://c060wt20ghv83" path="res://scenes/door_1_sm_001.tscn" id="20_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://b6pib3bv8tk5m" path="res://scenes/door_2_sm.tscn" id="21_5he1u"]
 [ext_resource type="Script" uid="uid://biufiao4tshl2" path="res://scripts/SCPFinalDoor2.gd" id="21_bx44k"]
+
 [ext_resource type="PackedScene" uid="uid://bsfh8ib7bvyn3" path="res://scenes/door.tscn" id="21_pm3ni"]
 [ext_resource type="AudioStream" uid="uid://c5qohfpad268j" path="res://assets/sounds/door_creak_open.wav" id="23_32suv"]
 [ext_resource type="PackedScene" uid="uid://b8llfttbrpjrr" path="res://scenes/8_room_PuzzleFinalDoor.tscn" id="23_61q37"]
 [ext_resource type="PackedScene" uid="uid://c38yn83wgd8fn" path="res://scenes/LeverModel.tscn" id="24_h78xu"]
 [ext_resource type="AudioStream" uid="uid://bw4an6w82c1cf" path="res://assets/sounds/clank1.wav" id="25_37tja"]
 [ext_resource type="AudioStream" uid="uid://c4oto3hc43is1" path="res://assets/sounds/horror-background-atmosphere-for-horror-and-mystical-179447.mp3" id="25_oa7hl"]
-[ext_resource type="Script" uid="uid://ccp1q6bton044" path="res://scripts/Enemy_Walking.gd" id="26_vxglm"]
+[ext_resource type="Script" path="res://scripts/Enemy_Walking.gd" id="26_vxglm"]
 [ext_resource type="PackedScene" uid="uid://di4llnlswp4ym" path="res://assets/Enemy/blob_monster.glb" id="27_2f3dj"]
 [ext_resource type="PackedScene" uid="uid://de181tmdtxj01" path="res://old_and_worn_out_hospital_bed/scene.gltf" id="30_fv21b"]
 [ext_resource type="PackedScene" uid="uid://byhpx0n20sunm" path="res://scenes/level_1_SCP_Card.tscn" id="31_l5hve"]
-[ext_resource type="Script" uid="uid://crj1bsxmcymlx" path="res://old_and_worn_out_hospital_bed/bed.gd" id="31_tel4y"]
+[ext_resource type="Script" path="res://old_and_worn_out_hospital_bed/bed.gd" id="31_tel4y"]
 [ext_resource type="PackedScene" uid="uid://cyo74ygqeml62" path="res://scenes/level_2_SCP_Card.tscn" id="34_kpnjq"]
 [ext_resource type="PackedScene" uid="uid://ovnuh833g6hn" path="res://scenes/level_3_SCP_Card.tscn" id="35_5an74"]
 [ext_resource type="PackedScene" uid="uid://dsua5kasct6os" path="res://scenes/level_4_SCP_Card.tscn" id="36_eo1lw"]
 [ext_resource type="PackedScene" uid="uid://dn0yud6pchsvd" path="res://scenes/level_5_SCP_Card.tscn" id="37_k43sp"]
 [ext_resource type="PackedScene" uid="uid://ch60q24jjbpkl" path="res://scenes/cardReader.tscn" id="39_lec1n"]
+
+[ext_resource type="PackedScene" uid="uid://dxfb4bymbhqim" path="res://scenes/hiddenMessage8.tscn" id="41_0eokt"]
+[ext_resource type="PackedScene" uid="uid://dywpu0isqsmti" path="res://scenes/digit_1_painting(8).tscn" id="43_vu686"]
+[ext_resource type="PackedScene" uid="uid://bf1hs37ycpuds" path="res://scenes/digit_2_painting(4).tscn" id="44_ue8rk"]
+[ext_resource type="PackedScene" uid="uid://u3mt46bcpfv5" path="res://scenes/digit_3_painting(2).tscn" id="45_sbhxy"]
+[ext_resource type="PackedScene" uid="uid://ldug80g7fcc5" path="res://scenes/digit_4_painting(0).tscn" id="46_jbqid"]
+[ext_resource type="PackedScene" uid="uid://b616j3vb4vh0x" path="res://scenes/PaintingSequence1.tscn" id="47_krwr1"]
+[ext_resource type="PackedScene" uid="uid://c1hyfelr3h0vf" path="res://scenes/PaintingSequence2.tscn" id="48_5nsym"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_02fca"]
 atlas = ExtResource("1_h2b84")
@@ -106,45 +119,6 @@ tracks/1/keys = {
 "values": [Vector3(-1.5708, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_qkpxi"]
-resource_name = "door1_SM"
-length = 2.0
-tracks/0/type = "rotation_3d"
-tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array()
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_5q0nq"]
-resource_name = "door1_SM001"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_fv21b"]
 resource_name = "door2_SM"
 length = 2.0
@@ -159,22 +133,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(-1.5708, 0, -1.5708), Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, -1.5708)]
-}
-
-[sub_resource type="Animation" id="Animation_dgi5k"]
-resource_name = "door3_SM"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_j8jky"]
@@ -221,6 +179,45 @@ tracks/1/keys = {
 "values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_5q0nq"]
+resource_name = "door1_SM001"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qkpxi"]
+resource_name = "door1_SM"
+length = 2.0
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_yq6so"]
 resource_name = "door_open"
 length = 2.0
@@ -244,16 +241,32 @@ tracks/1/keys = {
 "values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_dgi5k"]
+resource_name = "door3_SM"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tel4y"]
 _data = {
-&"RESET": SubResource("Animation_tel4y"),
-&"door1_SM": SubResource("Animation_qkpxi"),
-&"door1_SM001": SubResource("Animation_5q0nq"),
 &"door2_SM": SubResource("Animation_fv21b"),
+&"RESET": SubResource("Animation_tel4y"),
+&"door_open": SubResource("Animation_yq6so"),
+&"door1_SM001": SubResource("Animation_5q0nq"),
 &"door3_SM": SubResource("Animation_dgi5k"),
-&"door3_SM001": SubResource("Animation_j8jky"),
 &"door6_SM": SubResource("Animation_pibwh"),
-&"door_open": SubResource("Animation_yq6so")
+&"door1_SM": SubResource("Animation_qkpxi"),
+&"door3_SM001": SubResource("Animation_j8jky")
 }
 
 [sub_resource type="Animation" id="Animation_fuf3a"]
@@ -363,8 +376,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cjqg0"]
 _data = {
-&"RESET": SubResource("Animation_chjal"),
-&"door3_SM004": SubResource("Animation_2cjbq")
+&"door3_SM004": SubResource("Animation_2cjbq"),
+&"RESET": SubResource("Animation_chjal")
 }
 
 [sub_resource type="Animation" id="Animation_txyw0"]
@@ -400,8 +413,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vc5cj"]
 _data = {
-&"RESET": SubResource("Animation_txyw0"),
-&"door3_SM005": SubResource("Animation_vchkt")
+&"door3_SM005": SubResource("Animation_vchkt"),
+&"RESET": SubResource("Animation_txyw0")
 }
 
 [sub_resource type="Animation" id="Animation_ty1g6"]
@@ -646,8 +659,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0loja"]
 _data = {
-&"RESET": SubResource("Animation_o7ddy"),
-&"door3_SM009": SubResource("Animation_j2jfr")
+&"door3_SM009": SubResource("Animation_j2jfr"),
+&"RESET": SubResource("Animation_o7ddy")
 }
 
 [sub_resource type="Animation" id="Animation_1v6qk"]
@@ -836,7 +849,9 @@ texture = ExtResource("2_mp4yc")
 environment = SubResource("Environment_kk85q")
 
 [node name="Player" parent="." instance=ExtResource("2_s6fyp")]
+
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.7462, 7.39692, -4.87182)
+
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.947768, 0, 0.318959, 0, 1, 0, -0.318959, 0, -0.947768, -52.27, 10.665, 22.965)
@@ -869,6 +884,7 @@ transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01
 libraries = {
 &"": SubResource("AnimationLibrary_tel4y")
 }
+autoplay = "door2_SM"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door2"]
 stream = ExtResource("23_32suv")
@@ -1101,7 +1117,7 @@ volume_db = -3.0
 [node name="Door7" parent="NavigationRegion3D/Hospital8Room" instance=ExtResource("21_pm3ni")]
 
 [node name="door7_SM" parent="NavigationRegion3D/Hospital8Room/Door7" instance=ExtResource("19_pibwh")]
-transform = Transform3D(-3.61999e-08, -0.01, -3.61999e-08, 0, -3.61999e-08, 0.01, -0.01, 3.61999e-08, 1.31043e-13, 39.864, 0.41, -36.307)
+transform = Transform3D(-3.61999e-08, -0.01, -3.61999e-08, 0, -3.61999e-08, 0.01, -0.01, 3.61999e-08, 1.31043e-13, 39.864, 0.41, -36.2151)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door7/door7_SM"]
 libraries = {
@@ -1248,5 +1264,25 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 1.48927, 7.5, -2)
 [node name="CardReader" parent="." instance=ExtResource("39_lec1n")]
 transform = Transform3D(-1.31134e-08, -0.3, 1.31134e-08, 0, -1.31134e-08, -0.3, 0.3, -1.31134e-08, 5.73206e-16, 18.3567, 7.33256, -1.78819)
 
-[editable path="EnemyAI"]
-[editable path="EnemyAI/GameDesignBlob"]
+
+[node name="Node3D" parent="." instance=ExtResource("41_0eokt")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -51.9343, 12.0199, 19.519)
+
+[node name="Digit 1 Painting" parent="." instance=ExtResource("43_vu686")]
+transform = Transform3D(-0.6, 0, -9.05975e-08, 0, 0.6, 0, 9.05975e-08, 0, -0.6, -15.6793, 5.40128, 7.93208)
+
+[node name="Digit 2 Painting" parent="." instance=ExtResource("44_ue8rk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 44.4987, 0.151187, -48.1838)
+
+[node name="Digit 3 Painting" parent="." instance=ExtResource("45_sbhxy")]
+transform = Transform3D(-1.5299e-08, 0, 0.35, 0, 0.35, 0, -0.35, 0, -1.5299e-08, 32.0993, 0.923467, -34.7662)
+
+[node name="Digit 4 Painting" parent="." instance=ExtResource("46_jbqid")]
+transform = Transform3D(-1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 54.2852, 2.32561, -32.0162)
+
+[node name="PaintingSequence" parent="." instance=ExtResource("47_krwr1")]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 43.5833, 6.94852, -14.5352)
+
+[node name="Digit 1 Painting" parent="PaintingSequence" instance=ExtResource("48_5nsym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76428, 0.576881, -2.17563)
+

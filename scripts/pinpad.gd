@@ -7,13 +7,13 @@ extends CanvasLayer
 @onready var pinpadUI2=$"."
 
 var current_input = ""
-const CORRECT_CODE = "1950"
+const CORRECT_CODE = "8420"
 
 func _ready():
 	input_label.text = ""
 	feedback_label.text = ""
 
-	# Automatically connect all number buttons
+	
 	for i in range(10):
 		var btn_name = "ButtonsContainer/Button" + str(i)
 		if has_node(btn_name):
@@ -21,7 +21,7 @@ func _ready():
 			button.pressed.connect(_on_button_pressed.bind(i))
 			print("Connected:", btn_name)  # Debug
 
-	# Connect clear and enter buttons
+
 	$ButtonsContainer/ButtonClear.pressed.connect(_on_clear_pressed)
 	$ButtonsContainer/ButtonEnter.pressed.connect(_on_enter_pressed)
 
