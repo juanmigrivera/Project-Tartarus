@@ -1,5 +1,5 @@
 extends Node3D
-
+@export var doorlight = OmniLight3D
 @export var open_angle = 90.0
 @export var is_open = false
 @export var is_locked = true
@@ -32,3 +32,4 @@ func open_door():
 	door.is_open = true
 	door.rotation.y =90
 	door.position.x= -14.6
+	doorlight.light_color = Color(0, 1, 0)
