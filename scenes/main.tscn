@@ -20,11 +20,11 @@
 [ext_resource type="PackedScene" uid="uid://dduskioa552fi" path="res://scenes/door_3_sm_011.tscn" id="16_j8jky"]
 [ext_resource type="PackedScene" uid="uid://c61tcw82phyo2" path="res://scenes/door_5_sm_001.tscn" id="17_kmb1v"]
 [ext_resource type="PackedScene" uid="uid://crf4fj1ja76ch" path="res://scenes/door_1_sm.tscn" id="18_fuf3a"]
-[ext_resource type="Script" uid="uid://do7ba220b7jlf" path="res://scripts/SCP_FinalDoor.gd" id="19_okk03"]
+[ext_resource type="Script" uid="uid://c8kv3utt10t43" path="res://scripts/SCP_FinalDoor.gd" id="19_okk03"]
 [ext_resource type="PackedScene" uid="uid://dls2xa8ueyxf8" path="res://scenes/door_7_sm.tscn" id="19_pibwh"]
 [ext_resource type="PackedScene" uid="uid://c060wt20ghv83" path="res://scenes/door_1_sm_001.tscn" id="20_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://b6pib3bv8tk5m" path="res://scenes/door_2_sm.tscn" id="21_5he1u"]
-[ext_resource type="Script" uid="uid://biufiao4tshl2" path="res://scripts/SCPFinalDoor2.gd" id="21_bx44k"]
+[ext_resource type="Script" uid="uid://dq3fddtf7jecw" path="res://scripts/SCPFinalDoor2.gd" id="21_bx44k"]
 [ext_resource type="PackedScene" uid="uid://bsfh8ib7bvyn3" path="res://scenes/door.tscn" id="21_pm3ni"]
 [ext_resource type="AudioStream" uid="uid://c5qohfpad268j" path="res://assets/sounds/door_creak_open.wav" id="23_32suv"]
 [ext_resource type="PackedScene" uid="uid://b8llfttbrpjrr" path="res://scenes/8_room_PuzzleFinalDoor.tscn" id="23_61q37"]
@@ -41,7 +41,6 @@
 [ext_resource type="PackedScene" uid="uid://dsua5kasct6os" path="res://scenes/level_4_SCP_Card.tscn" id="36_eo1lw"]
 [ext_resource type="PackedScene" uid="uid://dn0yud6pchsvd" path="res://scenes/level_5_SCP_Card.tscn" id="37_k43sp"]
 [ext_resource type="PackedScene" uid="uid://ch60q24jjbpkl" path="res://scenes/cardReader.tscn" id="39_lec1n"]
-[ext_resource type="PackedScene" uid="uid://dxfb4bymbhqim" path="res://scenes/hiddenMessage.tscn" id="41_0eokt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_02fca"]
 atlas = ExtResource("1_h2b84")
@@ -837,7 +836,9 @@ texture = ExtResource("2_mp4yc")
 environment = SubResource("Environment_kk85q")
 
 [node name="Player" parent="." instance=ExtResource("2_s6fyp")]
+
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.7462, 7.39692, -4.87182)
+
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.947768, 0, 0.318959, 0, 1, 0, -0.318959, 0, -0.947768, -52.27, 10.665, 22.965)
@@ -1065,7 +1066,7 @@ volume_db = -3.0
 is_locked = true
 
 [node name="door5_SM001" parent="NavigationRegion3D/Hospital8Room/Door5_1" instance=ExtResource("17_kmb1v")]
-transform = Transform3D(1.94707e-09, 0.01, 4.37114e-10, 0, -4.37114e-10, 0.01, 0.01, -1.94707e-09, -8.51092e-17, 43.88, 5.57, -12.98)
+transform = Transform3D(1.62921e-09, 0.01, -1.66533e-18, -5.55111e-19, 2.22045e-18, 0.01, 0.01, -1.62921e-09, 1.11022e-18, 43.88, 5.57, -12.98)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door5_1"]
 stream = ExtResource("23_32suv")
@@ -1249,5 +1250,5 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 1.48927, 7.5, -2)
 [node name="CardReader" parent="." instance=ExtResource("39_lec1n")]
 transform = Transform3D(-1.31134e-08, -0.3, 1.31134e-08, 0, -1.31134e-08, -0.3, 0.3, -1.31134e-08, 5.73206e-16, 18.3567, 7.33256, -1.78819)
 
-[node name="Node3D" parent="." instance=ExtResource("41_0eokt")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -51.9343, 12.0199, 19.519)
+[editable path="EnemyAI"]
+[editable path="EnemyAI/GameDesignBlob"]
