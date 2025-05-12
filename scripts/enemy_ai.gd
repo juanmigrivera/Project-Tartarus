@@ -14,6 +14,7 @@ extends CharacterBody3D
 enum State { WANDER, CHASE }
 var state: State = State.WANDER
 var wander_timer: float = 0.0
+var kill = true
 
 func _ready():
 	randomize()
@@ -83,6 +84,6 @@ func _set_new_wander_target():
 	wander_timer = wander_time
 
 func on_area_3d_body_entered(body):
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") and kill:
 		print("Game Over!")
 		get_tree().change_scene_to_file("res://scenes/Menus/lose_screen.tscn")
