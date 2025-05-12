@@ -708,8 +708,47 @@ size = Vector3(274.216, 141.417, 157.117)
 [node name="Player" parent="." instance=ExtResource("1_nvyfr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.01194, 0)
 
+[node name="Node3D" type="Node3D" parent="Player"]
+
 [node name="EnemyAI" parent="." instance=ExtResource("1_5poiv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3069, 7.36041, 14.5189)
+
+[node name="GameDesignBlob" parent="EnemyAI" index="4"]
+transform = Transform3D(-0.35, 0, -3.0598e-08, 0, 0.35, 0, 3.0598e-08, 0, -0.35, 0, -0.861, 0)
+
+[node name="Skeleton3D" parent="EnemyAI/GameDesignBlob/Object_2/RootNode/Object_4" index="5"]
+bones/0/rotation = Quaternion(-3.85919e-08, 0.297381, 5.08945e-09, 0.954759)
+bones/1/position = Vector3(0.0630278, 3.53479, -0.089583)
+bones/1/rotation = Quaternion(-0.0375149, -0.368405, -0.011451, 0.928838)
+bones/2/rotation = Quaternion(0.0558229, 0.0408778, -0.00906116, 0.997562)
+bones/3/rotation = Quaternion(0.100557, 0.0796703, -0.0236719, 0.991454)
+bones/4/rotation = Quaternion(0.100557, 0.0796704, -0.0236719, 0.991454)
+bones/5/rotation = Quaternion(-0.0690254, -0.0110238, 0.00247142, 0.997551)
+bones/6/rotation = Quaternion(-0.0540229, 0.176671, -0.0128057, 0.982703)
+bones/7/position = Vector3(1.49012e-08, 0.135503, 0.0964481)
+bones/8/rotation = Quaternion(0.558443, 0.295358, -0.616225, 0.470289)
+bones/9/rotation = Quaternion(0.297762, -0.186961, 0.24953, 0.902285)
+bones/10/rotation = Quaternion(-0.051821, 0.0562481, 0.401982, 0.912448)
+bones/12/rotation = Quaternion(0.573716, -0.415424, 0.588511, 0.38978)
+bones/13/rotation = Quaternion(0.297163, 0.0110327, 0.18955, 0.935758)
+bones/14/rotation = Quaternion(0.0395317, -0.154163, -0.162167, 0.973844)
+bones/16/position = Vector3(0.894168, -0.335627, 0.0260327)
+bones/16/rotation = Quaternion(-0.0532109, -0.290238, 0.954693, 0.0386281)
+bones/17/rotation = Quaternion(-0.235163, 0.109771, -0.0195021, 0.965541)
+bones/18/rotation = Quaternion(0.601449, 0.423225, -0.461892, 0.495778)
+bones/19/rotation = Quaternion(0.00823021, 0.0236269, 0.160034, 0.986794)
+bones/20/position = Vector3(-5.96046e-08, 0.389069, 4.76837e-07)
+bones/20/rotation = Quaternion(-5.96046e-08, 2.98023e-08, -1.04308e-07, -1)
+bones/21/position = Vector3(-0.746121, -0.337569, -0.00420773)
+bones/21/rotation = Quaternion(0.0370143, 0.360537, 0.930665, 0.0500681)
+bones/22/rotation = Quaternion(-0.0533605, 0.330969, 0.0415186, 0.941216)
+bones/23/rotation = Quaternion(0.661508, -0.50194, 0.464339, 0.307981)
+bones/24/rotation = Quaternion(0.00220449, -0.0146505, -0.0896141, 0.995866)
+bones/25/position = Vector3(2.38419e-07, 0.32739, -1.19209e-06)
+bones/25/rotation = Quaternion(-2.98023e-08, -7.45058e-08, 4.47035e-08, 1)
+
+[node name="AnimationPlayer" parent="EnemyAI/GameDesignBlob" index="1"]
+speed_scale = 2.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 0
