@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbhkithx33oko"
-path.s3tc="res://.godot/imported/blob_monster_0.png-ebef540b96222ebda4f1b842f2e0525f.s3tc.ctex"
+uid="uid://dwlw2mof8kv6f"
+path.s3tc="res://.godot/imported/GameDesignBlob_Image_3.png-7e91f86922c450179d1efb37cf7ed646.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "ea360a23b86ef41b527a572c30b952fb"
+"md5": "1f30aad46ec1440128f6e3e959b80238"
 }
 
 [deps]
 
-source_file="res://assets/Enemy/blob_monster_0.png"
-dest_files=["res://.godot/imported/blob_monster_0.png-ebef540b96222ebda4f1b842f2e0525f.s3tc.ctex"]
+source_file="res://scenes/GameDesignBlob_Image_3.png"
+dest_files=["res://.godot/imported/GameDesignBlob_Image_3.png-7e91f86922c450179d1efb37cf7ed646.s3tc.ctex"]
 
 [params]
 

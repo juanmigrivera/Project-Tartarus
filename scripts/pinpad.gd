@@ -38,6 +38,7 @@ func _on_clear_pressed():
 
 func _on_enter_pressed():
 	if current_input == CORRECT_CODE:
+		get_tree().change_scene_to_file("res://scenes/Menus/win_screen.tscn")
 		feedback_label.text = "Unlocked!"
 		door.rotation_degrees.y = 90
 		door.position.x = 0.462
