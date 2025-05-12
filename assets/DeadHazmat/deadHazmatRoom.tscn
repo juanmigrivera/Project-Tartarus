@@ -53,7 +53,6 @@ transform = Transform3D(1.86408, 0, 0, 0, 1.86408, 0, 0, 0, 1.86408, -7.00952, 0
 [node name="Area3D" type="StaticBody3D" parent="Sketchfab_model/d134e7a865204dc690b607c3ae0f2633_fbx/RootNode/PlaceHolder_Wall/PlaceHolder_Wall_Wall_Mat_0" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/d134e7a865204dc690b607c3ae0f2633_fbx/RootNode/PlaceHolder_Wall/PlaceHolder_Wall_Wall_Mat_0/Area3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_daytk")
 
 [node name="PlaceHolder_Wall_Wall_Mat_1" type="MeshInstance3D" parent="Sketchfab_model/d134e7a865204dc690b607c3ae0f2633_fbx/RootNode/PlaceHolder_Wall" index="1"]
@@ -65,7 +64,6 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.209793, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/d134e7a865204dc690b607c3ae0f2633_fbx/RootNode/PlaceHolder_Wall/PlaceHolder_Wall_Wall_Mat_1/Area3D2" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_daytk")
 
 [node name="PlaceHolder_Wall_Wall_Mat_2" type="MeshInstance3D" parent="Sketchfab_model/d134e7a865204dc690b607c3ae0f2633_fbx/RootNode/PlaceHolder_Wall" index="2"]
@@ -77,5 +75,4 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.124634, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/d134e7a865204dc690b607c3ae0f2633_fbx/RootNode/PlaceHolder_Wall/PlaceHolder_Wall_Wall_Mat_2/Area3D3" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_daytk")
