@@ -58,4 +58,5 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="door7_SM_door7m_0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door7_SM_door7m_0/StaticBody3D"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_pdya3")
