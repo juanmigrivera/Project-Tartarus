@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://bq4ywxaybmdxg"]
+[gd_scene load_steps=111 format=3 uid="uid://bq4ywxaybmdxg"]
 
 [ext_resource type="PackedScene" uid="uid://d3i76yu5iej28" path="res://scenes/enemy_ai.tscn" id="1_5poiv"]
 [ext_resource type="Texture2D" uid="uid://b0amlji66pop" path="res://assets/SCP Cards/SCP Card Logo.png" id="1_h2b84"]
@@ -53,6 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://osd6vpbkgask" path="res://assets/DeadHazmat/deadHazmatRoom.tscn" id="49_i3360"]
 [ext_resource type="PackedScene" uid="uid://x8ksgi6gj6n0" path="res://scenes/GDFinalZ6.glb" id="49_ty1g6"]
 [ext_resource type="PackedScene" uid="uid://b1i2qtjbugsh1" path="res://scenes/hiddenMessageNoSalvationHere.tscn" id="53_2cdjj"]
+[ext_resource type="PackedScene" uid="uid://dw5rpxujf02ox" path="res://scenes/hiddenMessageTJWasHere.tscn" id="54_ly77t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_02fca"]
 atlas = ExtResource("1_h2b84")
@@ -722,7 +723,7 @@ size = Vector3(274.216, 141.417, 157.117)
 script = ExtResource("1_orqj0")
 
 [node name="Player" parent="." instance=ExtResource("1_nvyfr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.4783, 12.536, 24.3161)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9074, 12.536, 11.2039)
 
 [node name="Flashlight" parent="Player/Camera3D" index="1"]
 spot_angle = 34.22
@@ -1527,6 +1528,9 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -51.9922, 12.2507, 19.3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0869, 9.49357, 7.90338)
 light_color = Color(0.564706, 0, 0.670588, 1)
 light_energy = 0.745
+
+[node name="HiddenTJWasHere" parent="." instance=ExtResource("54_ly77t")]
+transform = Transform3D(-0.380621, 0.122996, -6.03983e-08, 0.122996, 0.380621, 1.07526e-08, 6.07784e-08, -8.34017e-09, -0.4, -52.1204, 12.3945, 33.8354)
 
 [connection signal="timeout" from="CanvasLayer/Panel/TypingTimer" to="CanvasLayer/Panel" method="_on_typing_timer_timeout"]
 
