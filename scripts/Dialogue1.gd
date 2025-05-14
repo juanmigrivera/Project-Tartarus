@@ -10,7 +10,8 @@ var dialogue_lines = [
 	"The mission debrief said there were hidden messages in this hospital, I should be on the lookout for them.",
 	"Press Q to toggle UV flashlight",
 	"Luckily I brought my bag with me to carry these cures",
-	"Press TAB to open inventory"
+	"Press TAB to open inventory",
+	"Press H for Hints"
 ]
 
 var current_line = 0
