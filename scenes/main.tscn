@@ -171,18 +171,6 @@ tracks/0/keys = {
 "values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_tel4y"]
-_data = {
-"RESET": SubResource("Animation_tel4y"),
-"door1_SM": SubResource("Animation_qkpxi"),
-"door1_SM001": SubResource("Animation_5q0nq"),
-"door2_SM": SubResource("Animation_fv21b"),
-"door3_SM": SubResource("Animation_dgi5k"),
-"door3_SM001": SubResource("Animation_j8jky"),
-"door6_SM": SubResource("Animation_pibwh"),
-"door_open": SubResource("Animation_yq6so")
-}
-
 [sub_resource type="Animation" id="Animation_5q0nq"]
 resource_name = "door1_SM001"
 length = 2.0
