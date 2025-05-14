@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://bq4ywxaybmdxg"]
+[gd_scene load_steps=113 format=3 uid="uid://bq4ywxaybmdxg"]
 
 [ext_resource type="PackedScene" uid="uid://d3i76yu5iej28" path="res://scenes/enemy_ai.tscn" id="1_5poiv"]
 [ext_resource type="Texture2D" uid="uid://b0amlji66pop" path="res://assets/SCP Cards/SCP Card Logo.png" id="1_h2b84"]
@@ -16,6 +16,8 @@
 [ext_resource type="FontFile" uid="uid://dtc243ajhjsgk" path="res://assets/Fonts/HorrorBrush-7Bv7l.ttf" id="8_dw7lk"]
 [ext_resource type="PackedScene" uid="uid://bhdh1nkgh7wvd" path="res://scenes/door_3_sm_004.tscn" id="8_vxglm"]
 [ext_resource type="PackedScene" uid="uid://dkh5usqdcmi65" path="res://scenes/door_3_sm_005.tscn" id="9_2f3dj"]
+[ext_resource type="AudioStream" uid="uid://cgokeduxoyrae" path="res://assets/sounds/intro.wav" id="9_px3jk"]
+[ext_resource type="Script" path="res://scenes/hint_manager.gd" id="10_six37"]
 [ext_resource type="PackedScene" uid="uid://bngh5wmx3g5dv" path="res://scenes/door_3_sm_006.tscn" id="10_yq6so"]
 [ext_resource type="PackedScene" uid="uid://l188ka4r5gst" path="res://scenes/door_3_sm_007.tscn" id="11_fv21b"]
 [ext_resource type="PackedScene" uid="uid://b17r6rfqvu2r6" path="res://scenes/door_6_sm.tscn" id="12_tel4y"]
@@ -53,6 +55,10 @@
 [ext_resource type="PackedScene" uid="uid://osd6vpbkgask" path="res://assets/DeadHazmat/deadHazmatRoom.tscn" id="49_i3360"]
 [ext_resource type="PackedScene" uid="uid://x8ksgi6gj6n0" path="res://scenes/GDFinalZ6.glb" id="49_ty1g6"]
 [ext_resource type="PackedScene" uid="uid://b1i2qtjbugsh1" path="res://scenes/hiddenMessageNoSalvationHere.tscn" id="53_2cdjj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_stjm6"]
+font = ExtResource("8_dw7lk")
+font_size = 20
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_02fca"]
 atlas = ExtResource("1_h2b84")
@@ -165,32 +171,16 @@ tracks/0/keys = {
 "values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_pibwh"]
-resource_name = "door6_SM"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../Door6_1/door6_SM001:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tel4y"]
+_data = {
+"RESET": SubResource("Animation_tel4y"),
+"door1_SM": SubResource("Animation_qkpxi"),
+"door1_SM001": SubResource("Animation_5q0nq"),
+"door2_SM": SubResource("Animation_fv21b"),
+"door3_SM": SubResource("Animation_dgi5k"),
+"door3_SM001": SubResource("Animation_j8jky"),
+"door6_SM": SubResource("Animation_pibwh"),
+"door_open": SubResource("Animation_yq6so")
 }
 
 [sub_resource type="Animation" id="Animation_5q0nq"]
@@ -296,7 +286,13 @@ tracks/0/keys = {
 "values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_fuf3a"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pibwh"]
+_data = {
+"RESET": SubResource("Animation_fuf3a"),
+"door3_SM002": SubResource("Animation_kmb1v")
+}
+
+[sub_resource type="Animation" id="Animation_5he1u"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -333,7 +329,13 @@ tracks/0/keys = {
 "values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_5he1u"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5poiv"]
+_data = {
+"RESET": SubResource("Animation_5he1u"),
+"door3_SM003": SubResource("Animation_c6pm6")
+}
+
+[sub_resource type="Animation" id="Animation_chjal"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -370,7 +372,13 @@ tracks/0/keys = {
 "values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_chjal"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cjqg0"]
+_data = {
+"RESET": SubResource("Animation_chjal"),
+"door3_SM004": SubResource("Animation_2cjbq")
+}
+
+[sub_resource type="Animation" id="Animation_txyw0"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -407,7 +415,13 @@ tracks/0/keys = {
 "values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_txyw0"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vc5cj"]
+_data = {
+"RESET": SubResource("Animation_txyw0"),
+"door3_SM005": SubResource("Animation_vchkt")
+}
+
+[sub_resource type="Animation" id="Animation_ty1g6"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -444,7 +458,13 @@ tracks/0/keys = {
 "values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_ty1g6"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j2jfr"]
+_data = {
+"RESET": SubResource("Animation_ty1g6"),
+"door3_SM006": SubResource("Animation_nvyfr")
+}
+
+[sub_resource type="Animation" id="Animation_bu4jf"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -481,7 +501,13 @@ tracks/0/keys = {
 "values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_bu4jf"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o7ddy"]
+_data = {
+"RESET": SubResource("Animation_bu4jf"),
+"door3_SM007": SubResource("Animation_bjg73")
+}
+
+[sub_resource type="Animation" id="Animation_ids8r"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -518,8 +544,14 @@ tracks/0/keys = {
 "values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 1.5708), Vector3(-1.5708, 3.14159, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_ids8r"]
-length = 0.001
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dnhof"]
+_data = {
+"RESET": SubResource("Animation_ids8r"),
+"door4_SM": SubResource("Animation_0loja")
+}
+
+[sub_resource type="Animation" id="Animation_cjqg0"]
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -527,10 +559,10 @@ tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-1.5708, 3.14159, 0)]
+"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dnhof"]
@@ -567,8 +599,14 @@ tracks/1/keys = {
 "values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, -1.5708), Vector3(-1.5708, 3.14159, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_cjqg0"]
-length = 2.0
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vchkt"]
+_data = {
+"RESET": SubResource("Animation_cjqg0"),
+"door6_SM001": SubResource("Animation_5poiv")
+}
+
+[sub_resource type="Animation" id="Animation_vc5cj"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -576,8 +614,8 @@ tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
 }
@@ -616,7 +654,13 @@ tracks/0/keys = {
 "values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 1.5708), Vector3(-1.5708, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_vc5cj"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nvyfr"]
+_data = {
+"RESET": SubResource("Animation_vc5cj"),
+"door6_SM002": SubResource("Animation_2f3dj")
+}
+
+[sub_resource type="Animation" id="Animation_1v6qk"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -653,7 +697,13 @@ tracks/0/keys = {
 "values": [Vector3(-1.5708, 1.5708, 0), Vector3(-1.5708, 1.5708, 1.5708), Vector3(-1.5708, 1.5708, 1.5708), Vector3(-1.5708, 1.5708, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_1v6qk"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_augu2"]
+_data = {
+"RESET": SubResource("Animation_1v6qk"),
+"door3_SM011": SubResource("Animation_dnhof")
+}
+
+[sub_resource type="Animation" id="Animation_kf5aa"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -688,21 +738,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(-1.5708, 1.5708, 0), Vector3(-1.5708, 1.5708, -1.5708), Vector3(-1.5708, 1.5708, -1.5708), Vector3(-1.5708, 1.5708, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_kf5aa"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-1.5708, 1.5708, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t5ykj"]
@@ -750,6 +785,39 @@ max_distance = 30.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 0
+
+[node name="HintPanel" type="Panel" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0.215686)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -83.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+script = ExtResource("10_six37")
+
+[node name="Label" type="Label" parent="CanvasLayer/HintPanel"]
+modulate = Color(1, 1, 1, 0.988235)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -26.0
+offset_top = -77.0
+offset_right = 27.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "testing"
+label_settings = SubResource("LabelSettings_stjm6")
+
+[node name="IntroDialogueAudio" type="AudioStreamPlayer3D" parent="CanvasLayer/HintPanel"]
+stream = ExtResource("9_px3jk")
+volume_db = 2.0
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
 visible = false
@@ -894,7 +962,7 @@ transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door1/door1_SM"]
 libraries = {
-&"": SubResource("AnimationLibrary_tel4y")
+"": SubResource("AnimationLibrary_tel4y")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door1"]
@@ -908,7 +976,7 @@ transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door2/door2_SM"]
 libraries = {
-&"": SubResource("AnimationLibrary_tel4y")
+"": SubResource("AnimationLibrary_tel4y")
 }
 autoplay = "door2_SM"
 
@@ -923,7 +991,7 @@ transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door1_1/door1_SM001"]
 libraries = {
-&"": SubResource("AnimationLibrary_tel4y")
+"": SubResource("AnimationLibrary_tel4y")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door1_1"]
@@ -937,7 +1005,7 @@ transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door3/door3_SM"]
 libraries = {
-&"": SubResource("AnimationLibrary_tel4y")
+"": SubResource("AnimationLibrary_tel4y")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door3"]
@@ -951,7 +1019,7 @@ transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door3_1/door3_SM001"]
 libraries = {
-&"": SubResource("AnimationLibrary_tel4y")
+"": SubResource("AnimationLibrary_tel4y")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door3_1"]
@@ -965,7 +1033,7 @@ transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door3_2/door3_SM002"]
 libraries = {
-&"": SubResource("AnimationLibrary_pibwh")
+"": SubResource("AnimationLibrary_pibwh")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door3_2"]
@@ -979,7 +1047,7 @@ transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door3_3/door3_SM003"]
 libraries = {
-&"": SubResource("AnimationLibrary_5poiv")
+"": SubResource("AnimationLibrary_5poiv")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door3_3"]
@@ -993,7 +1061,7 @@ transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door3_4/door3_SM004"]
 libraries = {
-&"": SubResource("AnimationLibrary_cjqg0")
+"": SubResource("AnimationLibrary_cjqg0")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door3_4"]
@@ -1007,7 +1075,7 @@ transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door3_5/door3_SM005"]
 libraries = {
-&"": SubResource("AnimationLibrary_vc5cj")
+"": SubResource("AnimationLibrary_vc5cj")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door3_5"]
@@ -1021,7 +1089,7 @@ transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door3_6/door3_SM006"]
 libraries = {
-&"": SubResource("AnimationLibrary_j2jfr")
+"": SubResource("AnimationLibrary_j2jfr")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door3_6"]
@@ -1035,7 +1103,7 @@ transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door3_7/door3_SM007"]
 libraries = {
-&"": SubResource("AnimationLibrary_o7ddy")
+"": SubResource("AnimationLibrary_o7ddy")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door3_7"]
@@ -1049,7 +1117,7 @@ transform = Transform3D(-0.00999999, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door4/door4_SM"]
 libraries = {
-&"": SubResource("AnimationLibrary_dnhof")
+"": SubResource("AnimationLibrary_dnhof")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door4"]
@@ -1065,7 +1133,7 @@ transform = Transform3D(-0.01, -2.53518e-08, -9.17733e-14, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door6/door6_SM"]
 libraries = {
-&"": SubResource("AnimationLibrary_tel4y")
+"": SubResource("AnimationLibrary_tel4y")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door6"]
@@ -1081,7 +1149,7 @@ transform = Transform3D(0.01, 0, 0, 0, -3.61999e-08, 0.01, 0, -0.01, -3.61999e-0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door6_1/door6_SM001"]
 libraries = {
-&"": SubResource("AnimationLibrary_vchkt")
+"": SubResource("AnimationLibrary_vchkt")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door6_1"]
@@ -1095,7 +1163,7 @@ transform = Transform3D(0.01, 0, 0, 0, -3.61999e-08, 0.01, 0, -0.01, -3.61999e-0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door6_2/door6_SM002"]
 libraries = {
-&"": SubResource("AnimationLibrary_nvyfr")
+"": SubResource("AnimationLibrary_nvyfr")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door6_2"]
@@ -1125,7 +1193,7 @@ transform = Transform3D(-3.61999e-08, -0.01, -3.61999e-08, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door3_11/door3_SM011"]
 libraries = {
-&"": SubResource("AnimationLibrary_augu2")
+"": SubResource("AnimationLibrary_augu2")
 }
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D/Hospital8Room/Door3_11/door3_SM011"]
@@ -1144,7 +1212,7 @@ transform = Transform3D(-3.61999e-08, -0.01, -3.61999e-08, 0, -3.61999e-08, 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/Hospital8Room/Door7/door7_SM"]
 libraries = {
-&"": SubResource("AnimationLibrary_t5ykj")
+"": SubResource("AnimationLibrary_t5ykj")
 }
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Hospital8Room/Door7"]

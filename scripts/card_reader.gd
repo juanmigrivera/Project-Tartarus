@@ -10,6 +10,8 @@ func _on_player_interact():
 			var door = $"../NavigationRegion3D/Hospital8Room/Door6"
 			var door2= $"../NavigationRegion3D/Hospital8Room/Door6_1"
 			if door and door.has_method("unlock_and_open"):
+				var manager = get_node_or_null("/root/Node3D/CanvasLayer/HintPanel")
+				manager.show_hints("puzzle_3")
 				door.unlock_and_open()
 				$InteractArea.queue_free()
 				$Label3D.queue_free()
