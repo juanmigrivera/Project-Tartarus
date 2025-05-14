@@ -56,12 +56,11 @@ func _move_towards_agent(current_speed: float, delta):
 	var next_position = nav_agent.get_next_path_position()
 	var direction = (next_position - global_position).normalized()
 	velocity = direction * current_speed
-	var facing_dir =-transform.basis.z.normalized()
-	#var angle_diff = facing_dir.angle_to(direction)
-	var angle_diff = facing_dir.signed_angle_to(direction, Vector3.UP)
-	rotate_y(angle_diff * 10 * delta)
 	
-	#look_at(next_position, Vector3.UP)
+	#rotations added by caden
+	if(direction.length() > 0.01):
+		look_at(next_position, Vector3.UP)
+	
 
 func _check_player_distance():
 	var distance = global_position.distance_to(player.global_position)
