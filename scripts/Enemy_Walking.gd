@@ -30,6 +30,5 @@ func _physics_process(delta):
 		else:
 			current_target = target_a
 	#rotate
-	var facing_dir = -transform.basis.z.normalized()
-	var angle_diff = facing_dir.signed_angle_to(direction, Vector3.UP)
-	rotate_y(angle_diff * rotation_speed * delta)
+	look_at(current_target.global_position, Vector3.UP)
+	
