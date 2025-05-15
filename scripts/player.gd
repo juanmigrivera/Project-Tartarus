@@ -7,6 +7,8 @@ extends CharacterBody3D
 @onready var collision_shape = $CollisionShape3D
 @onready var player_mesh = $"." 
 @onready var inventory_ui = $"../CanvasLayer/InventoryBar"
+@onready var enemy = $"../EnemyAI"
+
 @export var speed : int = 2.0
 @export var mouse_sensitivity : float = 0.05
 @export var interact_distance : float = 2.5
@@ -15,15 +17,17 @@ extends CharacterBody3D
 
 const GRAVITY = 2
 const JUMP = 5
+
 enum FlashlightMode { NORMAL, UV }
 var flashlight_mode: FlashlightMode = FlashlightMode.NORMAL
+
 var battery_level = battery_max
 var flashlight_on: bool = false
 var yaw = 0.0
 var pitch = 0.0
 var keycard_pieces_collected = 0
-var keycard_pieces_swiped:= 0
-const total_keycards:=5
+var keycard_pieces_swiped := 0
+const total_keycards := 5
 var is_hidden: bool = false
 var current_hidden_camera: Camera3D = null
 var interaction_handled: bool = false
@@ -40,7 +44,7 @@ func _input(event):
 		pitch = clamp(pitch, -90, 90)
 		$Camera3D.rotation_degrees = Vector3(pitch, 0, 0)
 		rotation_degrees.y = yaw
-		
+
 	if event.is_action_pressed("Inventory"):
 		inventory_ui.visible = !inventory_ui.visible
 
@@ -49,7 +53,7 @@ func _input(event):
 		player_flashlight.visible = flashlight_on
 		if flashlight_on:
 			update_flashlight_color()
-			
+
 	if Input.is_action_just_pressed("toggle_flashlight_mode") and flashlight_on:
 		flashlight_mode = FlashlightMode.UV if flashlight_mode == FlashlightMode.NORMAL else FlashlightMode.NORMAL
 		update_flashlight_color()
@@ -87,18 +91,15 @@ func _physics_process(delta):
 		if footstep_sounds.playing:
 			footstep_sounds.stop()
 
-	# Only run once per press
 	if Input.is_action_just_pressed("interact") and not interaction_handled:
 		interaction_handled = true
 		if is_hidden:
 			toggle_hide_camera(current_hidden_camera)
 		else:
 			handle_interact()
-			
+
 	if not Input.is_action_pressed("interact"):
 		interaction_handled = false
-
-	
 
 func handle_interact():
 	if interact_ray.is_colliding():
@@ -113,7 +114,7 @@ func handle_interact():
 			if current:
 				current._on_player_interact()
 
-func toggle_hide_camera(hidden_camera: Camera3D):
+func toggle_hide_camera(hidden_camera: Camera3D) -> bool:
 	if is_hidden:
 		normal_camera.current = true
 		hidden_camera.current = false
@@ -124,24 +125,30 @@ func toggle_hide_camera(hidden_camera: Camera3D):
 		hidden_camera.current = true
 		current_hidden_camera = hidden_camera
 		is_hidden = true
-		
+
+	# ✅ Notify the enemy directly
+	if enemy:
+		enemy.set_hidden_state(is_hidden)
+
+	return is_hidden
+
 func update_flashlight_color():
 	match flashlight_mode:
 		FlashlightMode.NORMAL:
-			player_flashlight.light_color = Color(1.0, 1.0, 1.0) # White
+			player_flashlight.light_color = Color(1.0, 1.0, 1.0)
 		FlashlightMode.UV:
-			player_flashlight.light_color = Color(1.0, 0.0, 1.0) # Purple
-			
+			player_flashlight.light_color = Color(1.0, 0.0, 1.0)
+
 func collect_keycard_piece():
 	keycard_pieces_collected += 1
 	print("Collected piece! Total: %d" % keycard_pieces_collected)
-	
+
 func swipe_keycard():
 	if keycard_pieces_swiped < keycard_pieces_collected:
 		keycard_pieces_swiped += 1
 		print("Swiped card %d/%d" % [keycard_pieces_swiped, total_keycards])
 	else:
 		print("All cards already swiped.")
-		
+
 func is_flashlight_uv() -> bool:
 	return flashlight_mode == FlashlightMode.UV and flashlight_on

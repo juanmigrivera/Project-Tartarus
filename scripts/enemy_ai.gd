@@ -1,15 +1,12 @@
 extends CharacterBody3D
 
-# CHANGE ANY VARIABLES DIRECTLY HERE / BETTER FOR BALANCE IF WE HAVE CHASE SPEED FASTER, ENCOURAGES
-# PLAYER AVOIDING ENEMIES
-@export var speed: int = 1#4
-@export var chase_speed: int = 1.5#6
-@export var detection_range: int = 10#3
-@export var wander_time: int = 6#2
+@export var speed: int = 1
+@export var chase_speed: int = 1.5
+@export var detection_range: int = 10
+@export var wander_time: int = 6
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
-#@onready var player: Node3D = get_tree().get_first_node_in_group("Player")
-@onready var player: Node3D =  get_node("/root/Node3D/Player")
+@onready var player: Node3D = get_node("/root/Node3D/Player")
 
 enum State { WANDER, CHASE }
 var state: State = State.WANDER
@@ -18,8 +15,7 @@ var kill = true
 
 func _ready():
 	randomize()
-	var area = $Area3D	
-	area.body_entered.connect(on_area_3d_body_entered)
+	$Area3D.body_entered.connect(on_area_3d_body_entered)
 	_set_new_wander_target()
 	var zombie_instance = $/root/Node3D/EnemyAI/GameDesignBlob
 	var anim_player = zombie_instance.get_node("AnimationPlayer")
@@ -40,8 +36,7 @@ func _process_wander(delta):
 	if nav_agent.is_navigation_finished():
 		_set_new_wander_target()
 	else:
-		_move_towards_agent(speed,delta)
-		
+		_move_towards_agent(speed, delta)
 
 	wander_timer -= delta
 	if wander_timer <= 0:
@@ -50,29 +45,24 @@ func _process_wander(delta):
 func _process_chase(delta):
 	nav_agent.target_position = player.global_position
 	if not nav_agent.is_navigation_finished():
-		_move_towards_agent(chase_speed,delta)
+		_move_towards_agent(chase_speed, delta)
 
 func _move_towards_agent(current_speed: float, delta):
 	var next_position = nav_agent.get_next_path_position()
 	var direction = (next_position - global_position).normalized()
 	velocity = direction * current_speed
-	
-	#rotations added by caden
-	if(direction.length() > 0.01):
+
+	if direction.length() > 0.01:
 		look_at(next_position, Vector3.UP)
-	
 
 func _check_player_distance():
 	var distance = global_position.distance_to(player.global_position)
-	#print(distance)
 	if distance < detection_range:
 		state = State.CHASE
 	else:
 		state = State.WANDER
 
 func _set_new_wander_target():
-	# SET NEW WANDER HAS 0 FOR Y SO IT STAYS ON THE SAME LEVEL. IF OUR FLOOR LEVEL DIFFERS
-	# MIGHT NEED TO ADJUST ROAMING
 	var random_offset = Vector3(
 		randf_range(-10, 10),
 		0,
@@ -86,3 +76,15 @@ func on_area_3d_body_entered(body):
 	if body.is_in_group("Player") and kill:
 		print("Game Over!")
 		get_tree().change_scene_to_file("res://scenes/Menus/lose_screen.tscn")
+
+func set_hidden_state(is_player_hidden: bool):
+	if is_player_hidden:
+		detection_range = 0.0
+		kill = false
+		if state == State.CHASE:
+			state = State.WANDER
+			print("Player hid — enemy reverting to WANDER.")
+	else:
+		detection_range = 10
+		kill = true
+		print("Player unhid — enemy re-enabled.")
